@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ирина Ким](https://up.htmlacademy.ru/adaptive/17/user/902977).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Кравченко](https://htmlacademy.ru/profile/dreamoctober).
 
 ---
 
