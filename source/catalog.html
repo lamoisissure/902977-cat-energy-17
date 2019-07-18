@@ -5,16 +5,27 @@
     <title>Cat Energy: интернет-магазин фитнес-еды для котиков</title>
   </head>
   <body>
-    <header class="container header">     <!-- .container - центровщик-->
-      <div class="site-logo">
-        <a class="site-logo__image" href="index.html">
+    <header class="header">     <!-- .container - центровщик-->
+      <div class="container header__wrapper">
+        <a class="header__logo">
           <img src="http://placehold.it/33x38" alt="Логотип 'Cat Energy', изображение">
-        </a>
-        <a class="site-logo__text" href="index.html">
           <img src="http://placehold.it/101x18" alt="Логотип 'Cat Energy', имя компании">
         </a>
       </div>
-      <button class="header-menu" type="button" aria-label="Открыть меню"></button>
+      <button class="header__button" type="button" aria-label="Открыть меню"></button>
+      <nav class="header__menu header-menu">
+        <ul class="header-menu__list">
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="container main main--catalog">
       <h1 class="title">Каталог продукции</h1>
@@ -22,13 +33,13 @@
         <h2 class="visually-hidden">Основные товары</h2>
         <ul class="goods__list">
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Pro со вкусом курицы, 500 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Pro 500 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Pro 500 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">500 г</td>
@@ -45,13 +56,13 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Pro со вкусом курицы, 1000 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Pro 1000 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Pro 1000 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">1000 г</td>
@@ -68,13 +79,13 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Pro со вкусом рыбы, 500 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Pro 500 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Pro 500 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">500 г</td>
@@ -91,13 +102,13 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Pro со вкусом рыбы, 1000 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Pro 1000 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Pro 1000 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">1000 г</td>
@@ -114,13 +125,13 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Slim со вкусом гречки, 500 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Slim 500 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Slim 500 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">500 г</td>
@@ -137,13 +148,13 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Slim со вкусом гречки, 1000 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Slim 1000 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Slim 1000 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">1000 г</td>
@@ -160,13 +171,13 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="goods__item good">
-            <a class="good__link good__link--image" href="#">
-              <img class="good__image" src="http://placehold.it/140x144">
+            <a class="good__link good__image-link" href="#">
+              <img src="http://placehold.it/140x144" alt="Cat Energy Slim со вкусом риса, 500 грамм">
             </a>
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Cat Energy Slim 500 г</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Cat Energy Slim 500 г</a>
-              </th>
               <tr>
                 <td class="good__parameter">Объем</td>
                 <td class="good__value">500 г</td>
@@ -186,17 +197,17 @@
         <div class="more-goods">
           <h2 class="more-goods__title">Показать еще 100500 товаров</h2>
           <p class="more-goods__info">На самом деле вкусов гораздо больше!</p>
-          <button class="button more-goods__button" type="button">Показать все</button>
+          <a class="button more-goods__button" href="#">Показать все</a>
         </div>
       </section>
       <section class="extra-goods">
         <h2 class="title">Дополнительные товары</h2>
         <ul class="extra-goods__list">
           <li class="extra-goods__item good">
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Сахарозаменитель</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Сахарозаменитель</a>
-              </th>
               <tr>
                 <td class="good__parameter">1 упаковка (100 г)</td>
                 <td class="good__value">100 р.</td>
@@ -205,10 +216,10 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="extra-goods__item good">
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Питьевая вода</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Питьевая вода</a>
-              </th>
               <tr>
                 <td class="good__parameter">5 литров</td>
                 <td class="good__value">50 р.</td>
@@ -217,10 +228,10 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="extra-goods__item good">
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="#">Молоко</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Молоко</a>
-              </th>
               <tr>
                 <td class="good__parameter">1 литр</td>
                 <td class="good__value">100 р.</td>
@@ -229,10 +240,10 @@
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="extra-goods__item good">
+            <h3 class="good__title">
+              <a class="good__link good__title-link" href="# ">Витамины</a>
+            </h3>
             <table class="good__description">
-              <th class="good__title">
-                <a class="good__link good__link--title" href="#">Витамины</a>
-              </th>
               <tr>
                 <td class="good__parameter">1 упаковка (30 г)</td>
                 <td class="good__value">300 р.</td>
@@ -245,48 +256,43 @@
       <a class="offer" href="#">Закажите все и получите чехол для кота в подарок!</a>
     </main>
     <footer class="footer">
-      <section class="contacts">
+      <section class="container footer__contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <div class="container">
-          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8
-            <br>Санкт-Петербург
-          </address>
-        </div>
-        <a class="contacts__link" href="#">
-          <img class="contacts__image" src="http://placehold.it/134x64" alt="Офис интернет-магазина 'Cat Energy' по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
-        </a>
+        <p class="footer__text">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </address>
       </section>
-      <div class="container">
-        <a class="site-logo__text" href="index.html">
-          <img src="http://placehold.it/101x18" alt="Логотип 'Cat Energy', имя компании">
+      <section class="footer__map">
+        <!-- здесь будет интерактивная карта -->
+      </section>
+      <section class="container footer__links">
+        <a class="footer__logo" href="index.html">
+          <img src="http://placehold.it/101x18" alt="Логотип 'Cat Energy'">
         </a>
-        <ul class="social">
+        <ul class="footer__social social">
           <li class="social__item">
-            <a class="social__button" href="#">
-              <img class="social__logo" src="http://placehold.it/20x20" alt="Cat Energy на сайте ВКонтакте">
+            <a class="social__link social__link--vk" href="#">
+              <img src="http://placehold.it/20x20" alt="Cat Energy на сайте ВКонтакте"> <!-- здесь будет svg -->
             </a>
           </li>
           <li class="social__item">
-            <a class="social__button" href="#">
-              <img class="social__logo" src="http://placehold.it/20x20" alt="Cat Energy на сайте Инстаграм">
+            <a class="social__link social__link--inst" href="#">
+              <img src="http://placehold.it/20x20" alt="Cat Energy на сайте Инстаграм"> <!-- здесь будет svg -->
             </a>
           </li>
           <li class="social__item">
-            <a class="social__button" href="#">
-              <img class="social__logo" src="http://placehold.it/20x20" alt="Cat Energy на сайте Фэйсбук">
+            <a class="social__link social__link--fb" href="#">
+              <img src="http://placehold.it/20x20" alt="Cat Energy на сайте Фэйсбук"> <!-- здесь будет svg -->
             </a>
           </li>
         </ul>
-        <div class="made-by">
+        <div class="footer__made-by made-by">
+          <span class="made-by__name">HTML Academy</span>
           <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="made-by__name" src="http://placehold.it/115x21" alt="Логотип HTML Academy, имя компании">
-          </a>
-          <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="made-by__image" src="http://placehold.it/27x34" alt="Логотип HTML Academy, изображение">
+            <svg class="made-by__image" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
           </a>
         </div>
-      </div>
+      </section>
     </footer>
   </body>
 </html>
