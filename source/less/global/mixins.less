@@ -1,0 +1,33 @@
+.main-font() {
+  font-family: @main-font;
+  font-weight: normal;
+  color: @font-black;
+}
+
+.main-font(@font-weight; @font-color) {
+  font-family: @main-font;
+  font-weight: @font-weight;
+  color: @font-color;
+}
+
+.light-font() {
+  font-family: @light-font;
+  font-weight: normal;
+  color: @font-grey;
+}
+
+.text-size(@font-size; @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.some-text() {
+  .light-font();
+  .text-size(14px; 18px);
+}
+
+.list-none() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
