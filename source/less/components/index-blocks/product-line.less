@@ -1,5 +1,7 @@
 .product-line__list {
   .list-none();
+  display: flex;
+  flex-direction: column;
 }
 
 .product-line__item {
@@ -26,4 +28,21 @@
   .main-font();
   .text-size(16px; 16px);
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .product-line__item {
+    margin-bottom: 20px;
+    padding: 80px 120px 65px 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-line__list {
+    flex-direction: row;
+  }
+
+  .product-line__item {
+    margin: 40px;
+  }
 }

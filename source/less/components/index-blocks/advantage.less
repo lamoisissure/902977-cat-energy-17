@@ -1,7 +1,31 @@
 .advantage__list {
   .list-none();
+  display: flex;
+  flex-direction: column;
 }
 
 .advantage__info {
   .some-text();
+}
+
+@media (min-width: @tablet-width) {
+  .advantage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantage__item {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage__list {
+    flex-direction: row;
+  }
+
+  .advantage__item {
+    width: 245px;
+  }
 }

@@ -1,8 +1,33 @@
 .extra {
   .list-none();
   padding-top: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .extra__item {
   padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .extra__item {
+    width: 288px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .extra__item {
+    width: 245px;
+  }
 }

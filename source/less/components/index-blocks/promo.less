@@ -1,7 +1,12 @@
 .promo {
+  outline: 1px dashed pink;  /* временно */
   text-align: center;
   padding-top: 29px;
   margin-bottom: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .promo__title {
@@ -24,4 +29,32 @@
 .promo__button {
   padding: 11px;
   .text-size(14px; 18px);
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    width: auto;
+    margin: 90px;
+  }
+
+  .promo__title,
+  .promo__slogan {
+    color: @font-black;
+  }
+
+  .promo__img {        /* поменять картинку */
+    order: 1;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding-bottom: 300px;    /* временно */
+  }
+
+  .promo__img {        /* поменять картинку */
+    position: absolute;
+    right: 200px;
+  }
 }

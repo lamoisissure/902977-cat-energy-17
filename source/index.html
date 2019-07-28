@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy: интернет-магазин фитнес-еды для котиков</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -27,12 +28,12 @@
         </nav>
       </div>
     </header>
-    <main class="main main--index">
+    <main class="main main-index">
       <div class="container">
         <section class="promo">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img src="img/raster/background/mobile/index-can-mobile@1x.png" width="280" height="271" alt="Cat Energy Pro со вкусом курицы">
+          <img class="promo__img" src="img/raster/background/mobile/index-can-mobile@1x.png" width="280" height="271" alt="Cat Energy Pro со вкусом курицы">
           <a class="button promo__button" href="form.html">Подобрать программу</a>
         </section>
         <section class="product-line">
@@ -69,20 +70,22 @@
         </section>
       </div>
       <section class="instance">
-        <div class="container">
-          <h2 class="big-title instance__title">Живой пример</h2>
-          <p class="instance__info">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="instance__stats stats">
-            <li class="stats__item">
-              <span class="stats__result">5 кг</span>
-              <span class="stats__desc">снижение веса</span>
-            </li>
-            <li class="stats__item">
-              <span class="stats__result">60 дней</span>
-              <span class="stats__desc">затрачено времени</span>
-            </li>
-            <li class="stats__item stats__item--cost">Затраты на питание: 15 000 руб.</li>
-          </ul>
+        <div class="container instance__container">
+          <div class="instance__wrapper">
+            <h2 class="big-title instance__title">Живой пример</h2>
+            <p class="instance__info">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <ul class="instance__stats stats">
+              <li class="stats__item">
+                <span class="stats__result">5 кг</span>
+                <span class="stats__desc">снижение веса</span>
+              </li>
+              <li class="stats__item">
+                <span class="stats__result">60 дней</span>
+                <span class="stats__desc">затрачено времени</span>
+              </li>
+              <li class="stats__item stats__item--cost">Затраты на питание: 15 000 руб.</li>
+            </ul>
+          </div>
           <div class="instance__photo">
             <img class="instance__image instance__image--before" src="img/raster/before-after/mobile/before-mobile@1x.png" width="320" height="240" alt="Фотография до прохождения программы">
             <img class="instance__image instance__image--after" src="img/raster/before-after/mobile/after-mobile@1x.png" width="320" height="240" alt="Фотография после прохождения программы">
@@ -96,19 +99,19 @@
       </section>
     </main>
     <footer class="footer">
-      <section class="container footer__contacts">
+      <section class="container footer__contacts contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <p class="footer__text">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </address>
       </section>
-      <section class="footer__map">
+      <section class="footer__map container map">
         <!-- здесь будет интерактивная карта -->
       </section>
-      <section class="footer__links">
-        <div class="container">
-          <a class="footer__logo">
-            <img class="footer__logo-img" src="img/vector/logo/logo-footer.svg" width="128" height="24" alt="Логотип 'Cat Energy', имя компании">
+      <section class="footer__links links">
+        <div class="container links__wrapper">
+          <a class="links__logo">
+            <img class="links__logo-img" src="img/vector/logo/logo-footer.svg" width="128" height="24" alt="Логотип 'Cat Energy', имя компании">
           </a>
           <ul class="footer__social social">
             <li class="social__item">
