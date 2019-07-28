@@ -1,6 +1,15 @@
 .stats {
   .list-none();
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stats__result,
+.stats__desc {
+  width: 125px;
+  display: flex;
+  flex-direction: column;
 }
 
 .stats__result {
@@ -18,3 +27,15 @@
   .text-size(14px; 20px);
   text-transform: uppercase;
 }
+
+// @media (min-width: @tablet-width) {
+//   .stats {
+
+//   }
+// }
+
+// @media (min-width: @desktop-width) {
+//   .stats {
+
+//   }
+// }

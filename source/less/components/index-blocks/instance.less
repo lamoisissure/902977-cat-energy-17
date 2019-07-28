@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 38px;
-  background-color: @bg-grey; /* можно ли "растянуть" серый фон?*/
+  background-color: @bg-grey;
 }
 
 .instance__title {
@@ -15,6 +15,24 @@
   .some-text();
 }
 
-// .instance__stats {
-//   .list-none();
+.instance__container {
+  display: flex;
+  flex-direction: column;
+}
+
+// @media (min-width: @tablet-width) {
+//   .instance__wrapper {
+
+//   }
 // }
+
+@media (min-width: @desktop-width) {
+  .instance__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .instance__info {
+    width: 440px;
+  }
+}

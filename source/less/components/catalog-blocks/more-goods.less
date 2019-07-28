@@ -15,7 +15,20 @@
 }
 
 .more-goods__button {
+  width: 280px;
   padding: 13px;
   color: @font-grey;
   background-color: @bg-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .more-goods__button {
+    width: 249px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more-goods__button {
+    width: 169px;
+  }
 }

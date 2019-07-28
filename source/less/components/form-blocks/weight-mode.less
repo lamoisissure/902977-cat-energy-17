@@ -1,8 +1,30 @@
-.owner-data {
+.weight-mode {
   .list-none();
-  padding-top: 32px;
+  margin-bottom: 29px;
 }
 
-.owner-data__item {
-  padding-bottom: 15px;
+.weight-mode__item {
+  padding-bottom: 27px;
+}
+
+@media (min-width: @tablet-width) {
+  .weight-mode {
+    width: auto;
+    padding: 25px 28px;
+    border: 1px solid #e6e6e6;;
+  }
+
+  .weight-mode__item {
+    padding-bottom: 30px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .weight-mode {
+    width: 570px;
+  }
 }
