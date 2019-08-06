@@ -1,7 +1,58 @@
+.slider {
+  margin-top: 26px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+}
+
 .slider__text {
+  margin: 0;
+  padding: 0;
   .main-font();
   .text-size(16px; 20px);
   text-transform: uppercase;
   border: none;
   background: none;
+  border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+
+  &:hover {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+  }
+
+  &:focus {
+    border: none;
+  }
+}
+
+.slider__scale {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  margin: 7px 18px;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  // цветной индикатор
+  &::before {
+    content: "";
+    position: absolute;
+    .abs-align-top;
+    left: 5px;
+    width: 35px;
+    height: 6px;
+    background-color: @green;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__text {
+    .text-size(20px; 20px);
+  }
+
+  .slider__scale {
+    width: 428px;
+    height: 6px;
+    margin: 13px 22px;
+  }
 }

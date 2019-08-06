@@ -1,16 +1,27 @@
 .social {
+  width: 100%;
+  margin: 0 auto;
   .list-none();
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
-  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social__item {
-  margin: 19px;
+.social__link {
+  display: block;
+  margin: 21px 25px 18px 15px;
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:focus path,
+  &:hover path {
+    fill: @green;
+  }
 }
 
 @media (min-width: @tablet-width) {

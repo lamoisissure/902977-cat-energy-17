@@ -1,67 +1,196 @@
+// ---------- мобильная версия ----------
 .programm {
+  padding-top: 15px;
+  padding-bottom: 11px;
   .main-font();
+
+  h1 {
+    width: 88%;
+    margin: 0 6%;
+  }
+}
+
+.programm__container {
+  width: 88%;
+  margin: 0 6%;
 }
 
 .programm__info {
-  margin-bottom: 41px;
+  width: 264px;
+  margin: 25px 1px 38px;
   .text-size(14px; 18px);
   text-transform: uppercase;
 }
 
-.fieldset {
+.programm .fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.programm__title {
-  .text-size(24px; 24px);
-  font-weight: normal;
+// серая полоса на всю ширину
+.programm__column .fieldset {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 113.6%;
+    height: 1px;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ededed;
+  }
 }
 
 .programm__label {
-  .main-font();
+  .main-font(normal; #222222);
   .text-size(16px; 18px);
   text-transform: uppercase;
 }
 
 .programm__input {
-  padding: 13px;
+  padding: 13px 16px;
   .main-font(normal; @font-grey);
   .text-size(16px; 18px);
   text-transform: uppercase;
   border: 1px solid #e6e6e6;
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid #444444;
+  }
+}
+
+.programm__title {
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
+  .text-size(24px; 24px);
+  font-weight: normal;
 }
 
 .programm__button {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
 }
 
 .programm__note {
+  padding: 7px;
   .light-font();
   .text-size(14px; 16px);
   text-align: center;
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
+  .programm {
+    padding: 23px 30px 67px;
+
+    h1 {
+      width: @tablet-width;
+      margin: 0 auto;
+    }
+  }
+
   .programm__container {
-    padding: 38px;
+    width: 708px;
+    margin: 0 auto;
+    padding: 0 41px;
+  }
+
+  .programm__info {
+    width: 364px;
+    margin: 55px 0 61px;
+    .text-size(20px; 30px);
+  }
+
+  .programm__column .fieldset::after {
+    display: none;
+  }
+
+  .programm__label {
+    .text-size(20px; 20px);
+  }
+
+  .programm__input {
+    padding: 13px 16px;
+    .text-size(20px; 20px);
+    border: 1px solid #e6e6e6;
+  }
+
+  .programm__title {
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+    .text-size(36px; 36px);
+    font-weight: normal;
   }
 
   .programm__wrapper {
     display: flex;
+    align-items: center;
   }
 
   .programm__button {
-    width: 568px;
-    margin-right: 80px;
+    width: 284px;
+    margin-right: 52px;
+    padding: 16px;
+    .text-size(20px; 20px);
+  }
+
+  .programm__note {
+    padding: 7px;
+    .text-size(16px; 16px);
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .programm {
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 7px 40px 78px;
+
+    h1 {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .programm__container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .programm__title {
+    padding: 0;
+  }
+
+  .programm__info {
+    width: 364px;
+    margin: 55px 0 62px;
+    .text-size(20px; 30px);
+  }
+
   .programm__column {
     display: flex;
     justify-content: space-between;
+  }
+
+  .programm__button {
+    width: 570px;
+    margin-right: 75px;
   }
 }

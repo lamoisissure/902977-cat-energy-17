@@ -1,16 +1,60 @@
+// ---------- мобильная версия ----------
 .weight-mode {
   .list-none();
   margin-bottom: 29px;
 }
 
 .weight-mode__item {
-  padding-bottom: 27px;
+  padding-bottom: 19px;
 }
 
+.weight-mode__label {
+  position: relative;
+  padding-left: 46px;
+
+  // радиокнопка
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    .abs-align-top;
+    left: 1px;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+  }
+}
+
+// зеленый индикатор выбора
+.weight-mode__input:checked ~ .weight-mode__label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  .abs-align-top;
+  left: 10px;
+  background-color: @green;
+  border-radius: 50%;
+}
+
+.weight-mode__input:focus {
+  & ~ .weight-mode__label {
+    opacity: 0.3;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .weight-mode {
-    width: auto;
-    padding: 25px 28px;
+    margin-bottom: 69px;
+    padding: 31px 40px;
     border: 1px solid #e6e6e6;
   }
 
@@ -21,10 +65,34 @@
       padding-bottom: 0;
     }
   }
-}
 
+  .weight-mode__label {
+    position: relative;
+    padding-left: 46px;
+
+    // радиокнопка
+    &::before {
+      width: 40px;
+      height: 40px;
+      left: -13px;
+    }
+  }
+
+  // зеленый индикатор выбора
+  .weight-mode__input:checked ~ .weight-mode__label::after {
+    width: 18px;
+    height: 18px;
+    left: -2px;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .weight-mode {
     width: 570px;
+    margin-bottom: 62px;
+    padding: 36px 40px;
   }
 }

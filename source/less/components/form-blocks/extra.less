@@ -1,30 +1,91 @@
+// ---------- мобильная версия ----------
 .extra {
   .list-none();
-  padding-top: 32px;
+  padding: 37px 0 17px;
   display: flex;
   flex-direction: column;
 }
 
 .extra__item {
-  padding-bottom: 30px;
+  padding-bottom: 19px;
 }
 
+.extra__label {
+  position: relative;
+  padding-left: 46px;
+
+  // чекбокс
+  &::before {
+    content: "";
+    position: absolute;
+    .abs-align-top;
+    left: 1px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cfcfcf;
+
+    // галка
+    .extra__input:checked ~ & {
+      background-image: url("../img/vector/icon-tick.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 21px 16px;
+    }
+  }
+}
+
+.extra__input:focus {
+  & ~ .extra__label {
+    opacity: 0.3;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .extra {
+    padding: 66px 0 8px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .extra__item {
-    width: 288px;
+    width: 283px;
+    padding-bottom: 48px;
+  }
+
+  .extra__label {
+    padding-left: 58px;
+
+    // чекбокс
+    &::before {
+      left: 1px;
+      width: 40px;
+      height: 40px;
+
+      // галка
+      .extra__input:checked ~ & {
+        background-position: center;
+      }
+    }
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .extra {
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 15px;
   }
 
   .extra__item {

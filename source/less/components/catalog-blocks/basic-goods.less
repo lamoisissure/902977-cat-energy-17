@@ -1,15 +1,16 @@
 .basic-goods {
-  margin-bottom: 25px;
+  margin-bottom: 66px;
 }
 
 .basic-goods__list {
   .list-none();
-  display: flex;
-  flex-wrap: wrap;
 }
 
-// @media (min-width: @tablet-width) {
-//   .basic-goods__item {
-
-//   }
-// }
+@media (min-width: @tablet-width) {
+  .basic-goods__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 768px;
+  }
+}

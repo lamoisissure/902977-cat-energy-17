@@ -2,25 +2,69 @@
   .list-none();
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-line__item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   padding: 25px 25px 22px 20px;
   background-color: @bg-grey;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .product-line__title {
+  position: relative;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 29px;
+  padding-top: 5px;
+  padding-left: 72px;
   .main-font();
   .text-size(24px; 37px);
   text-transform: uppercase;
+
+  // иконки с котами -->
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    .abs-align-top;
+    width: 50px;
+    height: 50px;
+  }
+
+  &::before {
+    left: 3px;
+    background-color: @green;
+    border-radius: 50%;
+  }
+
+  &::after {
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .product-line__item:first-child &::after {
+    left: 11px;
+    background-image: url("../img/vector/icon-cat-slim.svg");
+  }
+
+  .product-line__item:last-child &::after {
+    width: 67px;
+    height: 29px;
+    left: -5px;
+    background-image: url("../img/vector/icon-cat-pro.svg");
+  }
+  // <-- иконки с котами
 }
 
 .product-line__info {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 19px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d9d9d9;
   .some-text();
 }
 
@@ -28,21 +72,138 @@
   .main-font();
   .text-size(16px; 16px);
   text-transform: uppercase;
+  display: block;
+  position: relative;
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  // стрелка -->
+  &::after {
+    content: "";
+    position: absolute;
+    .abs-align-top;
+    left: 97px;
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/vector/icon-right-arrow-long.svg");
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 32px;
+    background-image: url("../img/vector/icon-right-arrow-verylong.svg");
+  }
+  // <-- стрелка
 }
 
 @media (min-width: @tablet-width) {
   .product-line__item {
-    margin-bottom: 20px;
-    padding: 80px 120px 65px 40px;
+    margin-bottom: 30px;
+    padding: 71px 282px 61px 52px;
+
+    &:last-child {
+      padding-right: 312px;
+    }
+  }
+
+  .product-line__title {
+    margin-bottom: 25px;
+    padding-left: 0;
+    .text-size(36px; 37px);
+
+    // иконки с котами -->
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 121px;
+      left: 395px;
+    }
+
+    .product-line__item:first-child &::after {
+      width: 200px;
+      height: 195px;
+      top: 106px;
+      left: 424px;
+    }
+
+    .product-line__item:last-child &::after {
+      width: 270px;
+      height: 112px;
+      top: 120px;
+      left: 360px;
+    }
+    // <-- иконки с котами
+  }
+
+  .product-line__info {
+    margin-bottom: 35px;
+    .text-size(16px; 24px);
+    border: none;
+  }
+
+  .product-line__link {
+    .text-size(20px; 20px);
+
+    // стрелка
+    &::after {
+      left: 130px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .product-line__list {
-    flex-direction: row;
+  .product-line {
+    margin-bottom: 29px;
+    padding-top: 229px;
   }
 
-  .product-line__item {
-    margin: 40px;
+  .product-line__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-line__item,
+  .product-line__item:last-child {
+    width: 570px;
+    margin: 0;
+    padding: 70px 52px 61px;
+
+    &:last-child {
+      padding-right: 52px;
+    }
+  }
+
+  .product-line__title {
+    margin-bottom: 75px;
+    padding-left: 162px;
+
+    // иконки с котами -->
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 27px;
+      left: 0;
+    }
+
+    .product-line__item:first-child &::after {
+      width: 100px;
+      height: 97px;
+      top: 19px;
+      left: 14px;
+    }
+
+    .product-line__item:last-child &::after {
+      width: 134px;
+      height: 56px;
+      top: 27px;
+      left: -18px;
+    }
+    // <-- иконки с котами
+  }
+
+  .product-line__info {
+    margin-bottom: 10px;
   }
 }
