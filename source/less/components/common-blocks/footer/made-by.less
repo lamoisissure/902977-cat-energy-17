@@ -1,14 +1,41 @@
 .made-by {
-  padding: 22px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.made-by__image {
+  fill: @font-grey;
+  margin-right: -6px;
+}
+
+.made-by__link {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 0;
   .light-font();
   .text-size(16px;16px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:focus .made-by__image,
+  &:hover .made-by__image {
+    fill: @green;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .made-by {
-    width: 162px;
+    width: 251px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .made-by {
+    width: 210px;  // возможно, временно
   }
 }

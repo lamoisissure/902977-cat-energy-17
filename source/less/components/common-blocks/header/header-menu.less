@@ -1,32 +1,141 @@
 .header-menu__list {
   .list-none();
+}
+
+.header-menu__item {
+  border-top: 2px solid #e6e6e6;
+}
+
+.header-menu__link {
+  display: block;
+  padding: 22px;
   .main-font(bold; @font-black);
   .text-size(20px; 20px);
   text-transform: uppercase;
   text-align: center;
 }
 
-.header-menu__item {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-top: 2px solid #e6e6e6;
+@media (max-width: @mobile-width-only) {
+  .header-menu__button {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+  }
 
-  &:last-child {
-    border-bottom: 1px solid #e6e6e6;
+  // иконка "гамбургер" при закрытом меню
+  .header-menu--closed .header-menu__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #222222;
+    box-shadow:
+      0 8px 0 0 #222222,
+      0 16px 0 0 #222222;
+  }
+
+  .header-menu--closed .header-menu__button::after,
+  .header-menu--closed .header-menu__list {
+    display: none;
+  }
+
+  // иконка "крестик" при открытом меню -->
+  .header-menu--opened .header-menu__button::before,
+  .header-menu--opened .header-menu__button::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #0f0f0f;
+  }
+
+  .header-menu--opened .header-menu__button::before {
+    transform: rotate(45deg);
+  }
+
+  .header-menu--opened .header-menu__button::after {
+    transform: rotate(-45deg);
+  }
+  // <-- иконка "крестик" при открытом меню
+
+  .header-menu--nojs .header-menu__button {
+    display: none;
   }
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .header-menu__list {
     display: flex;
   }
 
-  .header-menu__item,
-  .header-menu__item:last-child {
+  .header-menu__item {
+    padding: 18px;
     border: none;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .header-menu__link {
+    padding: 0;
+    padding-bottom: 7px;
+    margin: 0;
+    .main-font();
+    .text-size(18px; 25px);
+
+    &:not([href]) {
+      border-bottom: 2px solid @green;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  .header-menu__button {
+    display: none;
   }
 }
+//
+//
+//
+// ---------- десктопная версия ----------
+@media (min-width: @desktop-width) {
+  .header-menu__item {
+    margin: 0;
+    padding: 18px;
+  }
 
-// @media (min-width: @desktop-width) {
+  .header-menu__link {
+    .text-size(20px; 25px);
 
-// }
+    //белое меню на главной
+    &--index {
+      padding: 0;
+      padding-bottom: 9px;
+      margin: 0;
+      .main-font(normal; @font-white);
+      .text-size(20px; 25px);
+
+      &:not([href]) {
+        border-bottom: 2px solid @font-white;
+      }
+    }
+  }
+}

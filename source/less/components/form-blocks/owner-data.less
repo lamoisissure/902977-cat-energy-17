@@ -1,20 +1,59 @@
+// ---------- мобильная версия ----------
 .owner-data {
   .list-none();
+  margin-bottom: 8px;
   padding-top: 32px;
 }
 
 .owner-data__item {
+  position: relative;
   padding-bottom: 15px;
   display: flex;
   align-items: center;
+
+  svg {
+    position: absolute;
+    right: 16px;
+    fill: #444444;
+  }
 }
 
 .owner-data__input {
   margin-left: 10px;
+  padding-right: 43px;
   flex-grow: 1;
-}
 
+  &:invalid ~ svg {
+    fill: #ff8282;
+  }
+
+  &:focus ~ svg {
+    fill: @green;
+  }
+}
+//
+//
+//
+// ---------- планшетная версия ----------
+@media (min-width: @tablet-width) {
+  .owner-data {
+    margin-bottom: 45px;
+    padding-top: 72px;
+  }
+
+  .owner-data__input {
+    margin-left: 19px;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .owner-data {
+    margin-bottom: 48px;
+  }
+
   .owner-data__item {
     width: 570px;
   }

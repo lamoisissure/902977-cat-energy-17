@@ -1,41 +1,121 @@
 .stats {
   .list-none();
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.stats__result,
-.stats__desc {
-  width: 125px;
+.stats__item {
+  width: 88px;
+  margin: 0;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &:first-child {
+    margin-right: 67px;
+  }
+
+  // рамка для статистики, цельная
+  &::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    width: 124px;
+    height: 55px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+  }
 }
 
 .stats__result {
+  padding-bottom: 4px;
   .main-font();
   .text-size(24px; 24px);
-}
-
-.stats__desc {
-  .light-font();
-  .text-size(12px; 12px);
-}
-
-.stats__item--cost {
-  .main-font();
-  .text-size(14px; 20px);
   text-transform: uppercase;
 }
 
-// @media (min-width: @tablet-width) {
-//   .stats {
+.stats__desc {
+  padding: 5px 15px 9px;
+  .light-font();
+  .text-size(12px; 12px);
+  text-align: center;
+  background-color: @bg-grey;
+  z-index: 2;   // для эффекта "разорванной" рамки
+}
 
-//   }
-// }
+.stats__item-cost {
+  width: 100%;
+  .main-font();
+  .text-size(14px; 20px);
+  text-transform: uppercase;
+  text-align: center;
+}
 
-// @media (min-width: @desktop-width) {
-//   .stats {
+@media (min-width: @tablet-width) {
+  .stats {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 
-//   }
-// }
+  .stats__item {
+    width: 162px;
+    margin-top: 4px;
+
+    &:first-child {
+      margin-right: 42px;
+    }
+
+    // рамка
+    &::before {
+      top: -15px;
+      width: 161px;
+      height: 72px;
+    }
+  }
+
+  .stats__result {
+    padding-bottom: 6px;
+    .text-size(30px; 37px);
+  }
+
+  .stats__desc {
+    padding: 5px 8px 9px;
+    .text-size(14px; 14px);
+    background-color: @font-white;
+  }
+
+  .stats__item-cost {
+    width: 192px;
+    margin-left: 150px;
+    .text-size(20px; 20px);
+    text-align: right;
+
+    span {
+      display: block;
+      margin-bottom: 9px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .stats__item-cost {
+    width: 100%;
+    margin: 36px 0 0;
+    text-align: left;
+
+    span {
+      display: inline;
+      margin-right: 60px;
+    }
+  }
+}

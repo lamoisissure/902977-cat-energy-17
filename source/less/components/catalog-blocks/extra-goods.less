@@ -1,32 +1,107 @@
+.extra-goods {
+  padding-bottom: 37px;
+}
+
 .extra-goods__wrapper {
   display: flex;
   flex-direction: column;
 }
 
 .extra-goods__title {
+  position: relative;
+  margin-bottom: 34px;
   .main-font();
   .text-size(24px; 24px);
+  //
+  //   зеленая полоса
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     width: 19%;
+  //     height: 3px;
+  //     top: 14px;
+  //     right: -20px;
+  //     background-color: @green;
+  //   }
 }
 
 .extra-goods__list {
   .list-none;
+  margin-bottom: 41px;
 }
 
 .extra-goods__item {
+  margin-bottom: 17px;
   background: none;
-  border: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+}
+
+.extra-goods__description {
+  width: 30%;
+  min-width: 280px;
+  margin: auto;
+  margin-bottom: 15px;
+
+  a {
+    width: 100%;
+    padding: 11px 0 11px;
+  }
+
+  tr {
+    .text-size(14px; 14px);
+  }
+}
+
+.extra-goods__button {
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
+  .extra-goods__title {
+    width: auto;
+    margin: 0;
+    padding: 1px 7px;
+    .text-size(36px; 36px);
+    //
+    //  зеленая полоса
+    //     &::before {
+    //       content: "";
+    //       position: absolute;
+    //       width: 44%;
+    //       height: 3px;
+    //       top: 23px;
+    //       left: -340px;
+    //       background-color: @green;
+    //     }
+    //
+    //     &::after {
+    //       width: 84%;
+    //       top: 23px;
+    //       right: -270px;
+    //     }
+  }
+
   .extra-goods__item {
     width: auto;
     margin: 0;
+    padding: 0;
+    border: none;
   }
 
   .extra-goods__description {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
+    a {
+      width: 286px;
+      margin-right: auto;
+      padding: 0;
+      text-align: left;
+    }
+
+    tr {
+      width: 286px;
+    }
   }
 
   .extra-goods__button {

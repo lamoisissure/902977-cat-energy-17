@@ -1,31 +1,163 @@
+.advantage {
+  padding: 16px 0 32px 1px;
+}
+
 .advantage__list {
   .list-none();
   display: flex;
   flex-direction: column;
 }
 
+.advantage__item {
+  position: relative;
+
+  // иконки -->
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    .abs-align-top;
+    left: 0;
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:first-child::before {
+    background-image: url("../img/raster/advantage/advantage-leaf@1x.png");
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/raster/advantage/advantage-powder@1x.png");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/raster/advantage/advantage-dining@1x.png");
+  }
+
+  &:last-child::before {
+    background-image: url("../img/raster/advantage/advantage-clock@1x.png");
+  }
+  // <-- иконки
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
 .advantage__info {
   .some-text();
+  margin: 13px 5px;
+  padding: 0;
+  padding-left: 76px;
+
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .advantage {
+    padding: 45px 0 102px;
+  }
+
+  .advantage__title {
+    margin-bottom: 53px;
+  }
+
   .advantage__list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-content: space-between;
   }
 
   .advantage__item {
-    width: 324px;
+    width: 250px;
+    padding-top: 132px;
+
+    &:first-child {
+      margin-bottom: 112px;
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: 134px;
+    }
+
+    // иконки
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 60px;
+    }
+
+    // счетчик
+    &::after {
+      counter-increment: number;
+      content: counter(number);
+      position: absolute;
+      top: -20px;
+      left: 112px;
+      z-index: -1;
+      .main-font(normal; @bg-grey);
+      .text-size(281px; 281px);
+    }
+
+    &:first-child::after {
+      left: 118px;
+    }
+  }
+
+  .advantage__info {
+    margin: 0;
+    padding: 0;
+    .text-size(16px; 24px);
+
+    br {
+      display: block;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .advantage__title {
+    margin-bottom: 51px;
+  }
+
   .advantage__list {
     flex-direction: row;
   }
 
-  .advantage__item {
+  .advantage__item,
+  .advantage__item:nth-child(n) {
     width: 245px;
+    margin: 0;
+    margin-right: 80px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    // иконки
+    &::before {
+      top: 60px;
+    }
+
+    // счетчик
+    &::after {
+      counter-increment: number;
+      content: counter(number);
+      position: absolute;
+      top: -20px;
+      left: 112px;
+      z-index: -1;
+      .main-font(normal; @bg-grey);
+      .text-size(281px; 281px);
+    }
+
+    &:first-child::after {
+      left: 118px;
+    }
   }
 }

@@ -1,5 +1,17 @@
 .map {   /* временные стили */
   width: auto;
-  height: 400px;
+  height: 362px;
   background-color: antiquewhite;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    height: 396px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    height: 400px;
+  }
 }

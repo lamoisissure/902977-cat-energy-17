@@ -1,6 +1,8 @@
+// ---------- мобильная версия ----------
 .cat-data {
   .list-none();
-  margin-bottom: 9px;
+  margin-bottom: 24px;
+  padding-bottom: 7px;
 }
 
 .cat-data__item {
@@ -10,12 +12,29 @@
 }
 
 .cat-data__input {
-  margin-left: 10px;
+  margin-left: 15px;
   flex-grow: 1;
 }
+//
+//
+//
+// ---------- планшетная версия ----------
+@media (min-width: @tablet-width) {
+  .cat-data {
+    margin-bottom: 50px;
+  }
 
+  .cat-data__input {
+    margin-left: 18px;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .cat-data {
     width: 570px;
+    margin-bottom: 44px;
   }
 }
