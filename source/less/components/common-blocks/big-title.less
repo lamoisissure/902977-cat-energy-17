@@ -1,3 +1,4 @@
+// ---------- мобильная версия ----------
 .big-title {
   margin: 0;
   padding: 0;
@@ -5,8 +6,36 @@
   .text-size(36px; 60px);
 }
 
+.big-title--catalog {
+  padding: 15px 22px 28px 0;
+  text-align: center;
+}
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .big-title {
     font-size: 60px;
+  }
+
+  .big-title--catalog {
+    margin: 8px 0 136px;
+    text-align: left;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
+@media (min-width: @desktop-width) {
+  .big-title--catalog {
+    margin-bottom: 110px;
+  }
+
+  .big-title--catalog {
+    margin: 0;
+    margin-bottom: 160px;
+    padding: 6px 0;
   }
 }

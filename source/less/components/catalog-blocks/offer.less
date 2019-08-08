@@ -1,7 +1,9 @@
+// ---------- мобильная версия ----------
 .offer {
   position: relative;
-  display: block;
-  padding: 189px 57px 44px;
+  display: flex;
+  flex-direction: column;
+  padding: 186px 0 42px; // некрасивые отступы, как можно по-другому?
   .light-font();
   color: @font-white;
   text-align: center;
@@ -11,7 +13,11 @@
   background-size: 100%;
   background-position: center;
 
-  &::before { // не могу поменять цвет иконки (пробовала вставить fill="#ffffff" в path в svg-файле)
+  span {
+    margin: 1px;
+  }
+
+  &::before {
     content: "";
     position: absolute;
     width: 55px;
@@ -22,19 +28,45 @@
     background-image: url("../img/vector/icon-gift.svg");
   }
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .offer {
-    width: auto;
+    justify-content: center;
+    align-items: flex-end;
     margin: 0;
-    padding: 75px 37px;
+    padding: 72px 105px 68px; // некрасивые отступы, как можно по-другому?
     background-image: url("../img/raster/background/tablet/gift-photo-tablet@1x.jpg");
+    background-size: 100%;
+
+    span {
+      width: 180px;
+      text-align: left;
+    }
+
+    &::before {
+      left: 119px;
+    }
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .offer {
-    margin-left: 80px;
+    width: 245px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 42px;
+    justify-content: flex-end;
+    align-items: center;
     background-image: url("../img/raster/background/desktop/gift-photo-desktop@1x.jpg");
+
+    span {
+      text-align: center;
+    }
   }
 }

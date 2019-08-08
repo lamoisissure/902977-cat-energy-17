@@ -1,3 +1,4 @@
+// ---------- мобильная версия ----------
 .main {
   border-top: 2px solid #e6e6e6;
 }
@@ -31,12 +32,10 @@
   }
   // <-- для фона и фоновой заливки
 }
-
-.main-catalog__title {
-  padding: 15px 22px 28px 0;
-  text-align: center;
-}
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .main {
     border: none;
@@ -49,18 +48,16 @@
     }
   }
 
-  .main-catalog__wrapper {
+  .main__wrapper--catalog {
     width: @tablet-width;
     margin: 0 auto;
-    padding: 0 30px;
-  }
-
-  .main-catalog__title {
-    margin: 8px 0 136px;
-    text-align: left;
+    padding: 0 30px 75px;
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .main-index {
     // для фона и фоновой заливки -->
@@ -78,5 +75,11 @@
       background-repeat: no-repeat;
     }
     // <-- для фона и фоновой заливки
+  }
+
+  .main__wrapper--catalog {
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 }

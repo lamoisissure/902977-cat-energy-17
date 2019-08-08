@@ -1,3 +1,4 @@
+// ---------- мобильная версия ----------
 .more-goods {
   position: relative;
   padding-top: 67px;
@@ -38,8 +39,21 @@
   padding: 10px;
   color: @font-grey;
   background-color: @bg-grey;
-}
 
+  &:hover,
+  &:focus {
+    color: @font-grey;
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .more-goods {
     align-self: flex-start;
@@ -72,8 +86,24 @@
     margin: 0 36px;
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .more-goods {
+    width: 246px;
+  }
+
+  .more-goods__title {
+    margin-bottom: 29px;
+    padding: 0 33px;
+  }
+
+  .more-goods__info {
+    padding: 0 30px;
+  }
+
   .more-goods__button {
     width: 169px;
   }

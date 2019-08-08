@@ -1,0 +1,110 @@
+// ---------- мобильная версия ----------
+.extra-good {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.extra-good__description {
+  min-width: 280px;
+  margin: auto;
+  margin-bottom: 13px;
+  .light-font();
+  .text-size(14px; 14px);
+  border-collapse: collapse;
+}
+
+.extra-good__title {
+  padding: 12px 0 10px;
+  text-align: left;
+}
+
+.extra-good__title-link {
+  .main-font();
+  .text-size(16px; 20px);
+  text-transform: uppercase;
+}
+
+.extra-good__value {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.extra-good__button {
+  margin: 0;
+  padding: 10px;
+}
+//
+//
+//
+// ---------- планшетная версия ----------
+@media (min-width: @tablet-width) {
+  .extra-good {
+    padding: 25px 37px 27px;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+  }
+
+  .extra-good__description {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .text-size(16px; 16px);
+
+    td {
+      text-align: right;
+    }
+  }
+
+  .extra-good__title {
+    padding: 0;
+  }
+
+  .extra-good__title-link {
+    .text-size(20px; 20px);
+  }
+
+  .extra-good__parameter {
+    width: 192px;
+  }
+
+  .extra-good__value {
+    width: 95px;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
+@media (min-width: @desktop-width) {
+  .extra-good {
+    display: flex;
+    margin: 0;
+    padding: 17px 0 14px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .extra-good__description {
+    width: 650px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    td {
+      text-align: left;
+    }
+  }
+
+  .extra-good__parameter {
+    width: 245px;
+  }
+
+  .extra-good__value {
+    width: 80px;
+  }
+
+  .extra-good__button {
+    width: 245px;
+  }
+}

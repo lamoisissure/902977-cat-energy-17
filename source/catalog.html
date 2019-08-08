@@ -5,6 +5,36 @@
     <title>Cat Energy: интернет-магазин фитнес-еды для котиков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/preview-for-pixel-glass/mobile/cat-energy-catalog-mobile2.jpg");
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url( "img/preview-for-pixel-glass/tablet/cat-energy-catalog-tablet.jpg" );
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1300px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "img/preview-for-pixel-glass/desktop/cat-energy-catalog-desktop.jpg" );
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+  <link rel="stylesheet" href="pixel-glass/styles.css">
+  <script src="pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="header">
@@ -28,9 +58,9 @@
         </nav>
       </div>
     </header>
-    <main class="main main-catalog">
-      <div class="main-catalog__wrapper">
-        <h1 class="big-title main-catalog__title">Каталог продукции</h1>
+    <main class="main">
+      <div class="main__wrapper main__wrapper--catalog">
+        <h1 class="big-title big-title--catalog">Каталог продукции</h1>
         <section class="basic-goods">
           <h2 class="visually-hidden">Основные товары</h2>
           <ul class="basic-goods__list">
@@ -53,7 +83,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">700 р.</td>
+                    <td class="good__value good__value--price">700 р.</td>
                   </tr>
                 </table>
               </div>
@@ -78,7 +108,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">1000 р.</td>
+                    <td class="good__value good__value--price">1000 р.</td>
                   </tr>
                 </table>
               </div>
@@ -103,7 +133,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">700 р.</td>
+                    <td class="good__value good__value--price">700 р.</td>
                   </tr>
                 </table>
               </div>
@@ -128,7 +158,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">1000 р.</td>
+                    <td class="good__value good__value--price">1000 р.</td>
                   </tr>
                 </table>
               </div>
@@ -153,7 +183,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">400 р.</td>
+                    <td class="good__value good__value--price">400 р.</td>
                   </tr>
                 </table>
               </div>
@@ -178,7 +208,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">700 р.</td>
+                    <td class="good__value good__value--price">700 р.</td>
                   </tr>
                 </table>
               </div>
@@ -203,7 +233,7 @@
                   </tr>
                   <tr>
                     <td class="good__parameter">Цена</td>
-                    <td class="good__value">500 р.</td>
+                    <td class="good__value good__value--price">500 р.</td>
                   </tr>
                 </table>
               </div>
@@ -211,72 +241,77 @@
             </li>
             <li class="more-goods">
               <h2 class="more-goods__title">Показать еще 100500 товаров</h2>
-              <p class="more-goods__info">На самом деле вкусов гораздо больше!</p>
+              <p class="more-goods__info">
+                <span>На самом деле вкусов</span>
+                <span>гораздо больше!</span>
+              </p>
               <a class="button more-goods__button" href="#">Показать все</a>
             </li>
           </ul>
         </section>
-        <section class="container extra-goods">
-          <h2 class="extra-goods__title">Дополнительные товары</h2>
-          <div class="extra-goods__wrapper">
-            <ul class="extra-goods__list">
-              <li class="extra-goods__item good">
-                <table class="extra-goods__description good__description">
-                  <caption class="good__title">
-                    <a class="good__title-link" href="#">Сахарозаменитель</a>
+        <section class="container extras">
+          <h2 class="extras__title">Дополнительные товары</h2>
+          <div class="extras__wrapper">
+            <ul class="extras__list">
+              <li class="extras__item extra-good">
+                <table class="extra-good__description">
+                  <caption class="extra-good__title">
+                    <a class="extra-good__title-link" href="#">Сахарозаменитель</a>
                   </caption>
                   <tr>
-                    <td class="good__parameter">1 упаковка (200 г)</td>
-                    <td class="good__value">100 р.</td>
+                    <td class="extra-good__parameter">1 упаковка (200 г)</td>
+                    <td class="extra-good__value">100 р.</td>
                   </tr>
                 </table>
-                <a class="button good__button extra-goods__button" href="#">Заказать</a>
+                <a class="button extra-good__button" href="#">Заказать</a>
               </li>
-              <li class="extra-goods__item good">
-                <table class="extra-goods__description good__description">
-                  <caption class="good__title">
-                    <a class="good__title-link" href="#">Питьевая вода</a>
+              <li class="extras__item extra-good">
+                <table class="extra-good__description">
+                  <caption class="extra-good__title">
+                    <a class="extra-good__title-link" href="#">Питьевая вода</a>
                   </caption>
                   <tr>
-                    <td class="good__parameter">5 литров</td>
-                    <td class="good__value">50 р.</td>
+                    <td class="extra-good__parameter">5 литров</td>
+                    <td class="extra-good__value">50 р.</td>
                   </tr>
                 </table>
-                <a class="button good__button extra-goods__button" href="#">Заказать</a>
+                <a class="button extra-good__button" href="#">Заказать</a>
               </li>
-              <li class="extra-goods__item good">
-                <table class="extra-goods__description good__description">
-                  <caption class="good__title">
-                    <a class="good__title-link" href="#">Молоко</a>
+              <li class="extras__item extra-good">
+                <table class="extra-good__description">
+                  <caption class="extra-good__title">
+                    <a class="extra-good__title-link" href="#">Молоко</a>
                   </caption>
                   <tr>
-                    <td class="good__parameter">1 литр</td>
-                    <td class="good__value">100 р.</td>
+                    <td class="extra-good__parameter">1 литр</td>
+                    <td class="extra-good__value">100 р.</td>
                   </tr>
                 </table>
-                <a class="button good__button extra-goods__button" href="#">Заказать</a>
+                <a class="button extra-good__button" href="#">Заказать</a>
               </li>
-              <li class="extra-goods__item good">
-                <table class="extra-goods__description good__description">
-                  <caption class="good__title">
-                    <a class="good__title-link" href="# ">Витамины</a>
+              <li class="extras__item extra-good">
+                <table class="extra-good__description">
+                  <caption class="extra-good__title">
+                    <a class="extra-good__title-link" href="# ">Витамины</a>
                   </caption>
                   <tr>
-                    <td class="good__parameter">1 упаковка (30 г)</td>
-                    <td class="good__value">300 р.</td>
+                    <td class="extra-good__parameter">1 упаковка (30 г)</td>
+                    <td class="extra-good__value">300 р.</td>
                   </tr>
                 </table>
-                <a class="button good__button extra-goods__button" href="#">Заказать</a>
+                <a class="button extra-good__button" href="#">Заказать</a>
               </li>
             </ul>
-            <a class="offer" href="#">Закажите все
-              <br>и получите чехол для кота в подарок!
+            <a class="offer" href="#">
+              <span>Закажите все</span>
+              <span>и получите чехол для</span>
+              <span>кота в подарок!</span>
             </a>
           </div>
         </section>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--catalog">
       <section class="container footer__contacts contacts">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Как нас найти</h2>
@@ -336,21 +371,6 @@
         </div>
       </section>
     </footer>
-    <script>
-      var navMenu = document.querySelector(".header-menu");
-      var navToggle = document.querySelector(".header-menu__button");
-
-      navMenu.classList.remove("header-menu--nojs");
-
-      navToggle.addEventListener("click", function() {
-        if (navMenu.classList.contains("header-menu--closed")) {
-          navMenu.classList.remove("header-menu--closed");
-          navMenu.classList.add("header-menu--opened");
-        } else {
-          navMenu.classList.remove("header-menu--opened");
-          navMenu.classList.add("header-menu--closed");
-        }
-      });
-    </script>
+    <script src="js/header-menu.js"></script>
   </body>
 </html>

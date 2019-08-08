@@ -1,14 +1,11 @@
+// ---------- мобильная версия ----------
 .good {
   margin-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   border-top: 1px solid #ededed;
 }
 
 .good__wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -45,7 +42,7 @@
   text-align: right;
 }
 
-tr:last-child .good__value {
+.good__value--price {
   text-transform: uppercase;
 }
 
@@ -53,7 +50,10 @@ tr:last-child .good__value {
   margin: 0 20px;
   padding: 10px;
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .good {
     position: relative;
@@ -64,13 +64,14 @@ tr:last-child .good__value {
     background-color: @bg-grey;
     border: none;
 
-    &:nth-child(7) {
+    &:nth-child(7) { // почему не срабатывает :last-child?
       margin-bottom: 0;
     }
   }
 
   .good__wrapper {
     margin-bottom: 33px;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
   }
@@ -112,23 +113,26 @@ tr:last-child .good__value {
     margin: 0;
   }
 }
+//
+//
+//
+// ---------- десктопная версия ----------
+@media (min-width: @desktop-width) {
+  .good {
+    width: 246px;
 
-// @media (min-width: @desktop-width) {
-//   .good {
-//     width: 245px;
-//     margin-right: 80px;
-//     margin-bottom: 80px;
+    tr:last-child {
+      border-bottom: none;
+    }
 
-//     &:nth-child(2) {
-//       margin-right: 80px;
-//     }
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {  // почему не работает :nth-child(5+n)?
+      margin-bottom: 0;
+    }
+  }
 
-//     &:nth-child(4) {
-//       margin-right: 0;
-//     }
-//   }
-
-//   .good__button {
-//     width: 169px;
-//   }
-// }
+  .good__wrapper {
+    margin-bottom: 34px;
+  }
+}
