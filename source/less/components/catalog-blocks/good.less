@@ -9,10 +9,6 @@
   justify-content: center;
 }
 
-.good__image-link {
-  height: 144px;
-}
-
 .good__title {
   text-align: left;
 }
@@ -47,7 +43,7 @@
 }
 
 .good__button {
-  margin: 0 20px;
+  margin: -4px 20px 0;
   padding: 10px;
 }
 //
@@ -78,9 +74,19 @@
 
   .good__image-link {
     position: absolute;
-    top: -79px;
+    top: -46px;
     left: 50%;
     transform: translateX(-50%);
+    width: 324px;
+
+    img {
+      width: 648px;
+      height: auto;
+    }
+
+    &--big {
+      top: -82px;
+    }
   }
 
   .good__description {
@@ -134,5 +140,9 @@
 
   .good__wrapper {
     margin-bottom: 34px;
+  }
+
+  .good__image-link {
+    width: 246px;
   }
 }

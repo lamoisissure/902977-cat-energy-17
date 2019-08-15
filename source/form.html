@@ -5,12 +5,46 @@
     <title>Cat Energy: интернет-магазин фитнес-еды для котиков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+  <!-- Pixel Glass -->
+    <style>
+        HTML {
+          background-repeat: no-repeat;
+          background-position:  50% 0;
+          /* По умолчанию мобильный макет */
+          background-image: url("img/preview-for-pixel-glass/mobile/cat-energy-form-mobile.jpg");
+        }
+        /* Планшет */
+        @media ( min-width: 768px ) {
+          HTML {
+            /* Планшетный макет */
+            background-image: url( "img/preview-for-pixel-glass/tablet/cat-energy-form-tablet.jpg" );
+          }
+        }
+        /* Десктоп */
+        @media ( min-width: 1300px ) {
+          HTML {
+            /* Десктопный макет */
+            background-image: url( "img/preview-for-pixel-glass/desktop/cat-energy-form-desktop.jpg" );
+          }
+        }
+
+        BODY {
+          opacity: .5;
+        }
+      </style>
+  <link rel="stylesheet" href="pixel-glass/styles.css">
+  <script src="pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-img" src="img/vector/logo/logo-mobile.svg" width="191" height="38" alt="Логотип 'Cat Energy'">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/vector/logo/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/vector/logo/logo-tablet.svg">
+            <img class="header__logo-img" src="img/vector/logo/logo-mobile.svg" width="191" height="38" alt="Логотип 'Cat Energy'">
+          </picture>
         </a>
         <nav class="header__menu header-menu header-menu--closed header-menu--nojs">
           <button class="header-menu__button" type="button" aria-label="Открыть меню"></button>
@@ -127,7 +161,7 @@
         </form>
       </div>
     </main>
-    <footer class="footer footer-form">
+    <footer class="footer footer--form">
       <section class="container footer__contacts contacts">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Как нас найти</h2>
@@ -149,7 +183,7 @@
             <img class="links__logo-img" src="img/vector/logo/logo-footer.svg" width="128" height="24" alt="Логотип 'Cat Energy'">
           </a>
           <ul class="footer__social social">
-            <li class="social__item">
+            <li class="social__item social__item--vk">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Cat Energy на сайте ВКонтакте</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" x="0px" y="0px"	 viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
@@ -157,7 +191,7 @@
                   </svg>
               </a>
             </li>
-            <li class="social__item">
+            <li class="social__item social__item--inst">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Cat Energy на сайте Инстаграм</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" x="0px" y="0px"	 viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
@@ -169,7 +203,7 @@
                   </svg>
               </a>
             </li>
-            <li class="social__item">
+            <li class="social__item social__item--fb">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Cat Energy на сайте Фэйсбук</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="19" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">

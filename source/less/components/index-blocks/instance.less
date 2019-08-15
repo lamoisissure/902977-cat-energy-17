@@ -35,7 +35,10 @@
 .instance__image--after {
   display: none;
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .instance {
     padding-top: 43px;
@@ -56,16 +59,24 @@
     .text-size(16px; 24px);
   }
 
-  .instance__photo {  // временно
+  .instance__photo {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 659px;
     background-color: @bg-grey;
   }
-}
 
+  .instance__image {
+    width: 690px;
+    margin-top: 28px;
+    margin-left: 13px;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .instance {
     padding-top: 25px;
@@ -93,6 +104,9 @@
 
   .instance__photo {
     align-items: flex-end;
-    height: 596px;  // временно
+  }
+
+  .instance__image {
+    margin-top: -55px;
   }
 }

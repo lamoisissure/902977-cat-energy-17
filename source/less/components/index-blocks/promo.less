@@ -27,15 +27,17 @@
 
 .promo__button {
   align-self: stretch;
-  margin-top: 3px;
   padding: 11px;
   .text-size(14px; 18px);
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .promo {
     width: auto;
-    padding: 23px 88px;
+    padding: 23px 88px 506px;
     align-items: flex-start;
   }
 
@@ -51,7 +53,7 @@
   }
 
   .promo__slogan {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
     .text-size(20px; 20px);
   }
 
@@ -62,14 +64,18 @@
     .text-size(20px; 20px);
   }
 
-  .promo__img {        /* поменять картинку */
-    order: 1;
-    margin-top: -80px;
-    width: 768px;   /* временно */
-    height: 564px;    /* временно */
+  .promo__img {
+    position: absolute;
+    top: 224px;
+    right: 0;
+    width: 1418px;
+    height: auto;
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .promo {
     width: 600px;
@@ -77,15 +83,13 @@
     padding: 39px 80px;
   }
 
-  .promo__img {        /* поменять картинку */
-    position: absolute;
-    top: 50px;
-    right: -430px;
-    width: 530px;   /* временно */
-    height: 480px;    /* временно */
+  .promo__img {
+    top: -42px;
+    right: -402px;
+    width: 552px;
   }
 
   .promo__slogan {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 }

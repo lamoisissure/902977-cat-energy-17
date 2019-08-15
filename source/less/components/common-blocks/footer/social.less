@@ -23,9 +23,49 @@
     fill: @green;
   }
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .social {
+    width: 180px;
+    justify-content: right;
     border: none;
   }
+
+  .social__item {
+    svg {
+      height: auto;
+    }
+  }
+
+  .social__item--vk {
+    margin-left: 37px;
+    svg {
+      width: 30px;
+    }
+  }
+
+  .social__item--inst {
+    margin-left: 28px;
+    svg {
+      width: 23px;
+    }
+  }
+
+  .social__item--fb {
+    margin-left: 28px;
+    svg {
+      width: 15px;
+    }
+  }
+
+  .social__link {
+    margin: 0;
+  }
 }
+//
+//
+//
+// ---------- десктопная версия ----------

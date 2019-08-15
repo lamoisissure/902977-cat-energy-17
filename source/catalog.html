@@ -40,7 +40,11 @@
     <header class="header">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-img" src="img/vector/logo/logo-mobile.svg" width="191" height="38" alt="Логотип 'Cat Energy'">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/vector/logo/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/vector/logo/logo-tablet.svg">
+            <img class="header__logo-img" src="img/vector/logo/logo-mobile.svg" width="191" height="38" alt="Логотип 'Cat Energy'">
+          </picture>
         </a>
         <nav class="header__menu header-menu header-menu--closed header-menu--nojs">
           <button class="header-menu__button" type="button" aria-label="Открыть меню"></button>
@@ -67,7 +71,11 @@
             <li class="basic-goods__item good">
               <div class="good__wrapper">
                 <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 500 грамм">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/chicken-small-desktop@1x.png 1x, img/raster/goods/desktop/2x/chicken-small-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/chicken-small-tablet@1x.png 1x, img/raster/goods/tablet/2x/chicken-small-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 500 грамм" srcset="img/raster/goods/mobile/2x/chicken-small-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -91,8 +99,12 @@
             </li>
             <li class="basic-goods__item good">
               <div class="good__wrapper">
-                <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 1000 грамм">
+                <a class="good__image-link good__image-link--big" href="#">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/chicken-big-desktop@1x.png 1x, img/raster/goods/desktop/2x/chicken-big-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/chicken-big-tablet@1x.png 1x, img/raster/goods/tablet/2x/chicken-big-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 1000 грамм" srcset="img/raster/goods/mobile/2x/chicken-big-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -117,7 +129,11 @@
             <li class="basic-goods__item good">
               <div class="good__wrapper">
                 <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/fish-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 500 грамм">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/fish-small-desktop@1x.png 1x, img/raster/goods/desktop/2x/fish-small-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/fish-small-tablet@1x.png 1x, img/raster/goods/tablet/2x/fish-small-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/fish-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 500 грамм" srcset="img/raster/goods/mobile/2x/fish-small-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -141,8 +157,12 @@
             </li>
             <li class="basic-goods__item good">
               <div class="good__wrapper">
-                <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 1000 грамм">
+                <a class="good__image-link good__image-link--big" href="#">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/fish-big-desktop@1x.png 1x, img/raster/goods/desktop/2x/fish-big-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/fish-big-tablet@1x.png 1x, img/raster/goods/tablet/2x/fish-big-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 1000 грамм" srcset="img/raster/goods/mobile/2x/fish-big-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -167,7 +187,11 @@
             <li class="basic-goods__item good">
               <div class="good__wrapper">
                 <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim со вкусом гречки, 500 грамм">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/buckwheat-small-desktop@1x.png 1x, img/raster/goods/desktop/2x/buckwheat-small-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/buckwheat-small-tablet@1x.png 1x, img/raster/goods/tablet/2x/buckwheat-small-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim со вкусом гречки, 500 грамм" srcset="img/raster/goods/mobile/2x/buckwheat-small-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -191,8 +215,12 @@
             </li>
             <li class="basic-goods__item good">
               <div class="good__wrapper">
-                <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim со вкусом гречки, 1000 грамм">
+                <a class="good__image-link good__image-link--big" href="#">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/buckwheat-big-desktop@1x.png 1x, img/raster/goods/desktop/2x/buckwheat-big-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/buckwheat-big-tablet@1x.png 1x, img/raster/goods/tablet/2x/buckwheat-big-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim со вкусом гречки, 1000 грамм" srcset="img/raster/goods/mobile/2x/buckwheat-big-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -217,7 +245,11 @@
             <li class="basic-goods__item good">
               <div class="good__wrapper">
                 <a class="good__image-link" href="#">
-                  <img src="img/raster/goods/mobile/rice-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim со вкусом риса, 500 грамм">
+                  <picture>
+                    <source media="(min-width:1300px)" srcset="img/raster/goods/desktop/rice-small-desktop@1x.png 1x, img/raster/goods/desktop/2x/rice-small-desktop@2x.png 2x">
+                    <source media="(min-width:768px)" srcset="img/raster/goods/tablet/rice-small-tablet@1x.png 1x, img/raster/goods/tablet/2x/rice-small-tablet@2x.png 2x">
+                    <img src="img/raster/goods/mobile/rice-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim со вкусом риса, 500 грамм" srcset="img/raster/goods/mobile/2x/rice-small-mobile@2x.jpg 2x">
+                  </picture>
                 </a>
                 <table class="good__description">
                   <caption class="good__title">
@@ -313,7 +345,7 @@
     </main>
     <footer class="footer footer--catalog">
       <section class="container footer__contacts contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper contacts__wrapper--catalog">
           <h2 class="visually-hidden">Как нас найти</h2>
           <p class="contacts__text">Приглашаем
             <br>к сотрудничеству дилеров!
@@ -333,7 +365,7 @@
             <img class="links__logo-img" src="img/vector/logo/logo-footer.svg" width="128" height="24" alt="Логотип 'Cat Energy'">
           </a>
           <ul class="footer__social social">
-            <li class="social__item">
+            <li class="social__item social__item--vk">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Cat Energy на сайте ВКонтакте</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" x="0px" y="0px"	 viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
@@ -341,7 +373,7 @@
                   </svg>
               </a>
             </li>
-            <li class="social__item">
+            <li class="social__item social__item--inst">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Cat Energy на сайте Инстаграм</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" x="0px" y="0px"	 viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
@@ -353,7 +385,7 @@
                   </svg>
               </a>
             </li>
-            <li class="social__item">
+            <li class="social__item social__item--fb">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Cat Energy на сайте Фэйсбук</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="19" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">

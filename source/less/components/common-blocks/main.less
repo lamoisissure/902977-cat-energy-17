@@ -23,6 +23,10 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/raster/background/mobile/2x/index-background-mobile@2x.jpg");
+    }
   }
 
   &::after {
@@ -66,13 +70,17 @@
       display: block;
       top: -184px;
       left: 50%;
-      width: 50%;
+      width: 720px;
     }
 
     &::before {
       z-index: -1;
       background-image: url("../img/raster/background/desktop/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/raster/background/desktop/2x/index-background-desktop@2x.jpg");
+      }
     }
     // <-- для фона и фоновой заливки
   }
