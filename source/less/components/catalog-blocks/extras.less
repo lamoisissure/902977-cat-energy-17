@@ -13,17 +13,23 @@
   margin-bottom: 34px;
   .main-font();
   .text-size(24px; 24px);
-  //
-  //   зеленая полоса
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     width: 19%;
-  //     height: 3px;
-  //     top: 14px;
-  //     right: -20px;
-  //     background-color: @green;
-  //   }
+
+  span {
+    padding-right: 21px;
+    background-color: @bg-white;
+  }
+
+  // зеленая полоса
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80vw;
+    height: 3px;
+    top: 14px;
+    right: 0;
+    z-index: -1;
+    background-color: @green;
+  }
 }
 
 .extras__list {
@@ -38,34 +44,32 @@
 @media (min-width: @tablet-width) {
   .extras {
     width: 708px;
+    margin-top: -140px;
     padding: 0;
   }
 
   .extras__title {
-    margin: 0 37px 80px;
+    width: 708px;
+    margin-bottom: 80px;
     padding: 0;
     .text-size(36px; 36px);
-    //
-    //  зеленая полоса
-    //     &::before {
-    //       content: "";
-    //       position: absolute;
-    //       width: 44%;
-    //       height: 3px;
-    //       top: 23px;
-    //       left: -340px;
-    //       background-color: @green;
-    //     }
-    //
-    //     &::after {
-    //       width: 84%;
-    //       top: 23px;
-    //       right: -270px;
-    //     }
+
+    span {
+      padding: 0 37px;
+    }
+
+    // зеленая полоса
+    &::after {
+      width: 100vw;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   .extras__wrapper {
-    margin: 0 auto;
+    width: 708px;
+    padding: 0;
   }
 
   .extras__list {
@@ -83,11 +87,17 @@
   }
 
   .extras__title {
-    margin: 0;
-    margin-bottom: 80px;
+    width: 1220px;
+    margin-left: -37px;
+
+    // зеленая полоса
+    &::after {
+      left: 53%;
+    }
   }
 
   .extras__wrapper {
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }

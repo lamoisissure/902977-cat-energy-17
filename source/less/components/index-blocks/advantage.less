@@ -44,8 +44,7 @@
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     &::before {
-      width: 50px;
-      height: auto;
+      background-size: 50px;
     }
 
     &--leaf::before {
@@ -99,6 +98,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
+
+    counter-reset: number;
   }
 
   .advantage__item {
@@ -118,11 +119,6 @@
       width: 80px;
       height: 80px;
       top: 60px;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        width: 40px;
-        height: auto;
-      }
     }
 
     // счетчик
@@ -177,11 +173,6 @@
 
     &:nth-child(4n) {
       margin-right: 0;
-    }
-
-    // иконки
-    &::before {
-      top: 60px;
     }
 
     // счетчик

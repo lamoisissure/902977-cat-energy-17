@@ -103,8 +103,13 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="fieldset">
-            <legend class="programm__title">Контактные данные (владельца кота)</legend>
+          <fieldset class="fieldset fieldset--green-line">
+            <legend class="programm__title programm__title--owner">
+              <div>
+                <span>Контактные данные</span>
+                (владельца кота)
+              </div>
+            </legend>
             <ul class="owner-data">
               <div class="programm__column">
                 <li class="owner-data__item">
@@ -128,13 +133,17 @@
               </div>
             </ul>
           </fieldset>
-          <div class="comment">
-            <h2 class="programm__title">Комментарий</h2>
+          <div class="comment fieldset--green-line">
+            <h2 class="programm__title">
+              <span>Комментарий</span>
+            </h2>
             <label class="visually-hidden comment__label" for="comment"></label>
             <textarea class="programm__input comment__field" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-          <fieldset class="fieldset">
-            <legend class="programm__title">Дополнительно</legend>
+          <fieldset class="fieldset fieldset--green-line">
+            <legend class="programm__title">
+              <span>Дополнительно</span>
+            </legend>
             <ul class="extra">
               <li class="extra__item">
                 <input class="visually-hidden extra__input" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked>
@@ -163,7 +172,7 @@
     </main>
     <footer class="footer footer--form">
       <section class="container footer__contacts contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper contacts__wrapper--form">
           <h2 class="visually-hidden">Как нас найти</h2>
           <p class="contacts__text">Приглашаем
             <br>к сотрудничеству дилеров!
@@ -221,21 +230,6 @@
         </div>
       </section>
     </footer>
-    <script>
-      var navMenu = document.querySelector(".header-menu");
-      var navToggle = document.querySelector(".header-menu__button");
-
-      navMenu.classList.remove("header-menu--nojs");
-
-      navToggle.addEventListener("click", function() {
-        if (navMenu.classList.contains("header-menu--closed")) {
-          navMenu.classList.remove("header-menu--closed");
-          navMenu.classList.add("header-menu--opened");
-        } else {
-          navMenu.classList.remove("header-menu--opened");
-          navMenu.classList.add("header-menu--closed");
-        }
-      });
-    </script>
+    <script src="js/header-menu.js"></script>
   </body>
 </html>

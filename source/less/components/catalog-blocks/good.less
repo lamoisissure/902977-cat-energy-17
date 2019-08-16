@@ -59,10 +59,6 @@
     padding: 141px 38px 40px;
     background-color: @bg-grey;
     border: none;
-
-    &:nth-child(7) { // почему не срабатывает :last-child?
-      margin-bottom: 0;
-    }
   }
 
   .good__wrapper {
@@ -129,12 +125,6 @@
 
     tr:last-child {
       border-bottom: none;
-    }
-
-    &:nth-child(5),
-    &:nth-child(6),
-    &:nth-child(7) {  // почему не работает :nth-child(5+n)?
-      margin-bottom: 0;
     }
   }
 
