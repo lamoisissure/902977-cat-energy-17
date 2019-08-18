@@ -1,3 +1,37 @@
+.header--index {
+  position: relative;
+
+  // для фона и фоновой заливки -->
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -308px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    height: 96vw;
+    background-image: url("../img/raster/background/mobile/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/raster/background/mobile/2x/index-background-mobile@2x.jpg");
+    }
+  }
+
+  &::after {
+    z-index: -2;
+    height: 305px;
+    background-color: @green;
+  }
+  //  <-- для фона и фоновой заливки
+}
+
 .header__wrapper {
   position: relative;
   width: 100%;
@@ -23,6 +57,13 @@
 //
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
+  .header--index {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
   .header__wrapper {
     width: @tablet-width;
     margin: 0 auto;
@@ -40,6 +81,29 @@
 //
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .header--index {
+    // для фона и фоновой заливки -->
+    &::before,
+    &::after {
+      display: block;
+      top: -184px;
+      left: 50%;
+      width: 55vw;         // почему не ровно 50vw?
+      max-width: 1300px;
+    }
+
+    &::before {
+      z-index: -1;
+      background-image: url("../img/raster/background/desktop/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/raster/background/desktop/2x/index-background-desktop@2x.jpg");
+      }
+    }
+    // <-- для фона и фоновой заливки
+  }
+
   .header__wrapper {
     width: @desktop-width;
     margin: 0 auto;
