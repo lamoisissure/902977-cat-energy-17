@@ -15,15 +15,15 @@
   &::before {
     content: "";
     position: absolute;
-    width: 124px;
-    height: 106px;
+    width: 62px;
+    height: 53px;
     top: 50%;
     left: 50%;
     z-index: 1;
     transform: translateY(-50%) translateX(-50%);
     background-image: url("../img/raster/map/map-pin.png");
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
   }
 }
 //
@@ -40,7 +40,8 @@
     }
 
     &::before {
-      background-size: 100%;
+      width: 128px;
+      height: 106px;
     }
   }
 }

@@ -1,34 +1,23 @@
 .promo {
   position: relative;
 
-  // для фона и фоновой заливки -->
-  &::before,
-  &::after {
+  // для фона и фоновой заливки
+  &::before {
     content: "";
     position: absolute;
     top: 0;
     width: 100%;
     z-index: -1;
-  }
-
-  &::before {
     height: 734px;
-    background-image: url("../img/raster/background/mobile/index-background-mobile@1x.jpg");
+    background-image: url("../img/raster/background/mobile/index-background-mobile@1x.jpg"), linear-gradient(to bottom, @green 200px, transparent 200px);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
-    background-color: @green;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/raster/background/mobile/2x/index-background-mobile@2x.jpg");
     }
   }
-  // &::after {
-  //   z-index: -2;
-  //   height: 305px;
-  //   background-color: @green;
-  // }
-  //  <-- для фона и фоновой заливки
 }
 
 .promo__wrapper {
@@ -68,8 +57,7 @@
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .promo {
-    &::before,
-    &::after {
+    &::before {
       display: none;
     }
   }

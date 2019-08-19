@@ -7,34 +7,34 @@
     <link href="css/style.css" rel="stylesheet">
   <!-- Pixel Glass -->
     <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/preview-for-pixel-glass/mobile/cat-energy-form-mobile.jpg");
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
         HTML {
-          background-repeat: no-repeat;
-          background-position:  50% 0;
-          /* По умолчанию мобильный макет */
-          background-image: url("img/preview-for-pixel-glass/mobile/cat-energy-form-mobile.jpg");
+          /* Планшетный макет */
+          background-image: url( "img/preview-for-pixel-glass/tablet/cat-energy-form-tablet.jpg" );
         }
-        /* Планшет */
-        @media ( min-width: 768px ) {
-          HTML {
-            /* Планшетный макет */
-            background-image: url( "img/preview-for-pixel-glass/tablet/cat-energy-form-tablet.jpg" );
-          }
+      }
+      /* Десктоп */
+      @media ( min-width: 1300px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "img/preview-for-pixel-glass/desktop/cat-energy-form-desktop.jpg" );
         }
-        /* Десктоп */
-        @media ( min-width: 1300px ) {
-          HTML {
-            /* Десктопный макет */
-            background-image: url( "img/preview-for-pixel-glass/desktop/cat-energy-form-desktop.jpg" );
-          }
-        }
+      }
 
-        BODY {
-          opacity: .5;
-        }
-      </style>
-  <link rel="stylesheet" href="pixel-glass/styles.css">
-  <script src="pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="pixel-glass/styles.css">
+    <script src="pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="header">
