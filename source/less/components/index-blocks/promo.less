@@ -1,8 +1,41 @@
 .promo {
+  position: relative;
+
+  // для фона и фоновой заливки -->
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &::before {outline: 1px solid red;
+    height: 734px;
+    background-image: url("../img/raster/background/mobile/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    background-color: @green;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/raster/background/mobile/2x/index-background-mobile@2x.jpg");
+    }
+  }
+
+  // &::after {
+  //   z-index: -2;
+  //   height: 305px;
+  //   background-color: @green;
+  // }
+  //  <-- для фона и фоновой заливки
+}
+
+.promo__wrapper {
   text-align: center;
   padding-top: 27px;
-  margin: 0 auto 22px;
-  position: relative;
+  margin-bottom: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,8 +69,17 @@
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .promo {
-    width: auto;
-    padding: 23px 88px 506px;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .promo__wrapper {
+    position: relative;
+    min-height: 800px;
+    margin-bottom: 32px;
+    padding: 23px 118px;
     align-items: flex-start;
   }
 
@@ -67,8 +109,8 @@
   .promo__img {
     position: absolute;
     top: 224px;
-    right: 0;
-    width: 1418px;
+    left: 29px;
+    width: 709px;
     height: auto;
   }
 }
@@ -77,15 +119,18 @@
 //
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
-  .promo {
-    width: 600px;
-    margin: 0;
-    padding: 39px 80px;
+  .promo__wrapper {
+    min-height: 560px;
+    padding: 39px 120px;
+  }
+
+  .promo__title {
+    width: 560px;
   }
 
   .promo__img {
     top: -42px;
-    right: -402px;
+    left: 490px;
     width: 552px;
   }
 
