@@ -22,10 +22,21 @@
   .text-size(14px; 20px);
   font-style: normal;
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    padding: 65px 41px 40px;
+    padding: 44px 41px 40px;
+
+    &--catalog {
+      padding-top: 66px;
+    }
+
+    &--form {
+      padding-top: 66px;
+    }
   }
 
   .contacts__text,
@@ -47,7 +58,10 @@
     }
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .contacts {
     position: relative;
@@ -57,6 +71,7 @@
     position: absolute;
     top: 95px;
     left: 40px;
+    z-index: 1;
     width: 570px;
     padding: 65px 76px 39px;
     background-color: @bg-white;

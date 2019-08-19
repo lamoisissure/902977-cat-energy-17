@@ -1,17 +1,66 @@
-.map {   /* временные стили */
+// ---------- мобильная версия ----------
+.map {
+  position: relative;
   width: auto;
   height: 362px;
-  background-color: antiquewhite;
-}
+  background-image: url("../img/raster/map/mobile/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/raster/map/mobile/bg-map-mobile@2x.png");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 62px;
+    height: 53px;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translateY(-50%) translateX(-50%);
+    background-image: url("../img/raster/map/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .map {
     height: 396px;
+    background-image: url("../img/raster/map/tablet/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/raster/map/tablet/bg-map-tablet@2x.png");
+    }
+
+    &::before {
+      width: 128px;
+      height: 106px;
+    }
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .map {
     height: 400px;
+    background-image: url("../img/raster/map/desktop/bg-map-desktop@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/raster/map/desktop/bg-map-desktop@2x.png");
+    }
+
+    &::before {
+      top: 50%;
+      left: 73.5%;
+    }
   }
 }

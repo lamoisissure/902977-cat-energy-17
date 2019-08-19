@@ -1,0 +1,108 @@
+// ---------- мобильная версия ----------
+.extras {
+  padding-bottom: 37px;
+}
+
+.extras__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.extras__title {
+  position: relative;
+  margin-bottom: 34px;
+  .main-font();
+  .text-size(24px; 24px);
+
+  span {
+    padding-right: 21px;
+    background-color: @bg-white;
+  }
+
+  // зеленая полоса
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80vw;
+    height: 3px;
+    top: 14px;
+    right: 0;
+    z-index: -1;
+    background-color: @green;
+  }
+}
+
+.extras__list {
+  .list-none;
+  margin-bottom: 40px;
+  border-top: 1px solid #d9d9d9;
+}
+//
+//
+//
+// ---------- планшетная версия ----------
+@media (min-width: @tablet-width) {
+  .extras {
+    width: 708px;
+    margin-top: -140px;
+    padding: 0;
+  }
+
+  .extras__title {
+    width: 708px;
+    margin-bottom: 80px;
+    padding: 0;
+    .text-size(36px; 36px);
+
+    span {
+      padding: 0 37px;
+    }
+
+    // зеленая полоса
+    &::after {
+      width: 100vw;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .extras__wrapper {
+    width: 708px;
+    padding: 0;
+  }
+
+  .extras__list {
+    margin-bottom: 69px;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
+@media (min-width: @desktop-width) {
+  .extras {
+    width: 1220px;
+    padding-bottom: 86px;
+  }
+
+  .extras__title {
+    width: 1220px;
+    margin-left: -37px;
+
+    // зеленая полоса
+    &::after {
+      left: 53%;
+    }
+  }
+
+  .extras__wrapper {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .extras__list {
+    margin: 0;
+  }
+}

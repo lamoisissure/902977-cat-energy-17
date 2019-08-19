@@ -1,16 +1,37 @@
+// ---------- мобильная версия ----------
 .basic-goods {
-  margin-bottom: 66px;
+  margin-bottom: 28px;
 }
 
 .basic-goods__list {
   .list-none();
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
+  .basic-goods {
+    margin-bottom: 67px;
+  }
+
   .basic-goods__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 768px;
+    max-width: @tablet-width;
+  }
+}
+//
+//
+//
+// ---------- десктопная версия ----------
+@media (min-width: @desktop-width) {
+  .basic-goods {
+    margin-bottom: 75px;
+  }
+
+  .basic-goods__list {
+    max-width: @desktop-width;
   }
 }

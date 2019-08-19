@@ -1,5 +1,6 @@
 .advantage {
-  padding: 16px 0 32px 1px;
+  padding-top: 17px;
+  padding-bottom: 34px;
 }
 
 .advantage__list {
@@ -9,7 +10,9 @@
 }
 
 .advantage__item {
+  display: flex;
   position: relative;
+  padding: 14px 0 12px;
 
   // иконки -->
   &::before {
@@ -24,20 +27,42 @@
     background-position: center;
   }
 
-  &:first-child::before {
+  &--leaf::before {
     background-image: url("../img/raster/advantage/advantage-leaf@1x.png");
   }
 
-  &:nth-child(2)::before {
+  &--powder::before {
     background-image: url("../img/raster/advantage/advantage-powder@1x.png");
   }
 
-  &:nth-child(3)::before {
+  &--dining::before {
     background-image: url("../img/raster/advantage/advantage-dining@1x.png");
   }
 
-  &:last-child::before {
+  &--clock::before {
     background-image: url("../img/raster/advantage/advantage-clock@1x.png");
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    &::before {
+      background-size: 50px;
+    }
+
+    &--leaf::before {
+      background-image: url("../img/raster/advantage/2x/advantage-leaf@2x.png");
+    }
+
+    &--powder::before {
+      background-image: url("../img/raster/advantage/2x/advantage-powder@2x.png");
+    }
+
+    &--dining::before {
+      background-image: url("../img/raster/advantage/2x/advantage-dining@2x.png");
+    }
+
+    &--clock::before {
+      background-image: url("../img/raster/advantage/2x/advantage-clock@2x.png");
+    }
   }
   // <-- иконки
 }
@@ -49,18 +74,22 @@
 
 .advantage__info {
   .some-text();
-  margin: 13px 5px;
+  margin: 0;
   padding: 0;
-  padding-left: 76px;
+  padding-left: 79px;
 
   br {
     display: none;
   }
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .advantage {
-    padding: 45px 0 102px;
+    padding-top: 45px;
+    padding-bottom: 90px;
   }
 
   .advantage__title {
@@ -71,6 +100,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
+
+    counter-reset: number;
   }
 
   .advantage__item {
@@ -78,7 +109,7 @@
     padding-top: 132px;
 
     &:first-child {
-      margin-bottom: 112px;
+      margin-bottom: 101px;
     }
 
     &:nth-child(2n+1) {
@@ -119,8 +150,15 @@
     }
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .advantage {
+    padding-bottom: 89px;
+  }
+
   .advantage__title {
     margin-bottom: 51px;
   }
@@ -137,11 +175,6 @@
 
     &:nth-child(4n) {
       margin-right: 0;
-    }
-
-    // иконки
-    &::before {
-      top: 60px;
     }
 
     // счетчик

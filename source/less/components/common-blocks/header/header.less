@@ -32,7 +32,7 @@
   }
 
   .header__logo {
-    margin: 11px 0;
+    margin: 0;
   }
 }
 //
@@ -40,6 +40,29 @@
 //
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .header--index {
+    position: relative;
+
+    // для фона и фоновой заливки -->
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 0;
+      width: auto;
+      height: 696px;  // фактическая высота картинки
+      background-image: url("../img/raster/background/desktop/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: @green;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/raster/background/desktop/2x/index-background-desktop@2x.jpg");
+      }
+    }
+  }
+
   .header__wrapper {
     width: @desktop-width;
     margin: 0 auto;

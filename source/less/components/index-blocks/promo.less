@@ -1,8 +1,29 @@
 .promo {
+  position: relative;
+
+  // для фона и фоновой заливки
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 734px;
+    background-image: url("../img/raster/background/mobile/index-background-mobile@1x.jpg"), linear-gradient(to bottom, @green 200px, transparent 200px);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/raster/background/mobile/2x/index-background-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo__wrapper {
   text-align: center;
   padding-top: 27px;
-  margin: 0 auto 22px;
-  position: relative;
+  margin-bottom: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,15 +48,25 @@
 
 .promo__button {
   align-self: stretch;
-  margin-top: 3px;
   padding: 11px;
   .text-size(14px; 18px);
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .promo {
-    width: auto;
-    padding: 23px 88px;
+    &::before {
+      display: none;
+    }
+  }
+
+  .promo__wrapper {
+    position: relative;
+    min-height: 800px;
+    margin-bottom: 32px;
+    padding: 23px 118px;
     align-items: flex-start;
   }
 
@@ -51,7 +82,7 @@
   }
 
   .promo__slogan {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
     .text-size(20px; 20px);
   }
 
@@ -62,30 +93,35 @@
     .text-size(20px; 20px);
   }
 
-  .promo__img {        /* поменять картинку */
-    order: 1;
-    margin-top: -80px;
-    width: 768px;   /* временно */
-    height: 564px;    /* временно */
+  .promo__img {
+    position: absolute;
+    top: 224px;
+    left: 29px;
+    width: 709px;
+    height: auto;
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
-  .promo {
-    width: 600px;
-    margin: 0;
-    padding: 39px 80px;
+  .promo__wrapper {
+    min-height: 560px;
+    padding: 39px 120px;
   }
 
-  .promo__img {        /* поменять картинку */
-    position: absolute;
-    top: 50px;
-    right: -430px;
-    width: 530px;   /* временно */
-    height: 480px;    /* временно */
+  .promo__title {
+    width: 560px;
+  }
+
+  .promo__img {
+    top: -42px;
+    left: 490px;
+    width: 552px;
   }
 
   .promo__slogan {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 }

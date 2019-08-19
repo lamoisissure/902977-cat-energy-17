@@ -32,16 +32,19 @@
           opacity: .5;
         }
       </style>
-  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-  <script src="../node_modules/pixel-glass/script.js"></script>
+  <link rel="stylesheet" href="pixel-glass/styles.css">
+  <script src="pixel-glass/script.js"></script>
   !-- // Pixel Glass -->
 </head>
 <body>
-  <header class="header">
+  <header class="header header--index">
     <div class="header__wrapper">
       <a class="header__logo">
-        <img class="header__logo-img" src="img/vector/logo/logo-mobile.svg" width="191" height="38"
-          alt="Логотип 'Cat Energy'">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/vector/logo/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/vector/logo/logo-tablet.svg">
+          <img class="header__logo-img" src="img/vector/logo/logo-mobile.svg" width="191" height="38" alt="Логотип 'Cat Energy'">
+        </picture>
       </a>
       <nav class="header__menu header-menu header-menu--closed header-menu--nojs">
         <button class="header-menu__button" type="button" aria-label="Открыть меню"></button>
@@ -59,52 +62,55 @@
       </nav>
     </div>
   </header>
-  <main class="main main-index">
-    <div class="container">
-      <section class="promo">
+  <main class="main">
+    <section class="promo">
+      <div class="promo__wrapper container">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__img" src="img/raster/background/mobile/index-can-mobile@1x.png" width="280" height="271"
-          alt="Cat Energy Pro со вкусом курицы">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/raster/background/desktop/index-can-desktop@1x.png 1x, img/raster/background/desktop/2x/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/raster/background/tablet/index-can-tablet@1x.jpg 1x, img/raster/background/tablet/2x/index-can-tablet@2x.jpg 2x">
+          <img class="promo__img" src="img/raster/background/mobile/index-can-mobile@1x.png" width="280" height="271" alt="Cat Energy Pro со вкусом курицы" srcset="img/raster/background/mobile/2x/index-can-mobile@2x.png 2x">
+        </picture>
         <a class="button promo__button" href="form.html">Подобрать программу</a>
-      </section>
-      <section class="product-line">
-        <h2 class="visually-hidden">Выбор продуктовой линейки</h2>
-        <ul class="product-line__list">
-          <li class="product-line__item">
-            <h3 class="product-line__title">Похудение</h3>
-            <p class="product-line__info">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="product-line__link" href="#">Каталог Slim</a>
-          </li>
-          <li class="product-line__item">
-            <h3 class="product-line__title">Набор массы</h3>
-            <p class="product-line__info">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-              поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="product-line__link" href="#">Каталог Pro</a>
-          </li>
-        </ul>
-      </section>
-      <section class="advantage">
-        <h2 class="big-title advantage__title">Как это работает</h2>
-        <ul class="advantage__list">
-          <li class="advantage__item">
-            <p class="advantage__info">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="advantage__item">
-            <p class="advantage__info">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-          </li>
-          <li class="advantage__item">
-            <p class="advantage__info">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="advantage__item">
-            <p class="advantage__info">Уже через месяц наслаждайтесь изменениями к лучшему
-              <br>вашего питомца!
-            </p>
-          </li>
-        </ul>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="product-line container">
+      <h2 class="visually-hidden">Выбор продуктовой линейки</h2>
+      <ul class="product-line__list">
+        <li class="product-line__item">
+          <h3 class="product-line__title">Похудение</h3>
+          <p class="product-line__info">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="product-line__link" href="#">Каталог Slim</a>
+        </li>
+        <li class="product-line__item">
+          <h3 class="product-line__title">Набор массы</h3>
+          <p class="product-line__info">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+            поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="product-line__link" href="#">Каталог Pro</a>
+        </li>
+      </ul>
+    </section>
+    <section class="advantage container">
+      <h2 class="big-title advantage__title">Как это работает</h2>
+      <ul class="advantage__list">
+        <li class="advantage__item advantage__item--leaf">
+          <p class="advantage__info">Функциональное питание содержит только полезные питательные вещества.</p>
+        </li>
+        <li class="advantage__item advantage__item--powder">
+          <p class="advantage__info">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+        </li>
+        <li class="advantage__item advantage__item--dining">
+          <p class="advantage__info">Замените один-два приема обычной еды на наше функциональное питание.</p>
+        </li>
+        <li class="advantage__item advantage__item--clock">
+          <p class="advantage__info">Уже через месяц наслаждайтесь изменениями к лучшему
+            <br>вашего питомца!
+          </p>
+        </li>
+      </ul>
+    </section>
     <section class="instance">
       <div class="container instance__container">
         <div class="instance__wrapper">
@@ -128,10 +134,16 @@
           </ul>
         </div>
         <div class="instance__photo">
-          <img class="instance__image instance__image--before" src="img/raster/before-after/mobile/before-mobile@1x.png"
-            width="320" height="240" alt="Фотография до прохождения программы">
-          <img class="instance__image instance__image--after" src="img/raster/before-after/mobile/after-mobile@1x.png"
-            width="320" height="240" alt="Фотография после прохождения программы">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/raster/before-after/desktop/before-desktop@1x.png 1x, img/raster/before-after/desktop/before-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/raster/before-after/tablet/before-tablet@1x.png 1x, img/raster/before-after/tablet/before-tablet@2x.png 2x">
+            <img class="instance__image instance__image--before" src="img/raster/before-after/mobile/before-mobile@1x.png" width="320" height="240" alt="Фотография до прохождения программы" srcset="img/raster/before-after/mobile/before-mobile@2x.png 2x">
+          </picture>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/raster/before-after/desktop/after-desktop@1x.png 1x, img/raster/before-after/desktop/after-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/raster/before-after/tablet/after-tablet@1x.png 1x, img/raster/before-after/tablet/after-tablet@2x.png 2x">
+            <img class="instance__image instance__image--after" src="img/raster/before-after/mobile/after-mobile@1x.png" width="320" height="240" alt="Фотография после прохождения программы" srcset="img/raster/before-after/mobile/after-mobile@2x.png 2x">
+          </picture>
           <div class="instance__slider slider">
             <button class="slider__text" type="button">Было</button>
             <div class="slider__scale">
@@ -162,11 +174,10 @@
     <section class="footer__links links">
       <div class="container links__wrapper">
         <a class="links__logo">
-          <img class="links__logo-img" src="img/vector/logo/logo-footer.svg" width="128" height="24"
-            alt="Логотип 'Cat Energy'">
+          <img class="links__logo-img" src="img/vector/logo/logo-footer.svg" width="128" height="24" alt="Логотип 'Cat Energy'">
         </a>
         <ul class="footer__social social">
-          <li class="social__item">
+          <li class="social__item social__item--vk">
             <a class="social__link" href="#">
               <span class="visually-hidden">Cat Energy на сайте ВКонтакте</span>
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" x="0px" y="0px"	 viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
@@ -174,7 +185,7 @@
                 </svg>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item social__item--inst">
             <a class="social__link" href="#">
               <span class="visually-hidden">Cat Energy на сайте Инстаграм</span>
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" x="0px" y="0px"	 viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
@@ -186,7 +197,7 @@
                 </svg>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item social__item--fb">
             <a class="social__link" href="#">
               <span class="visually-hidden">Cat Energy на сайте Фэйсбук</span>
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="19" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
@@ -207,21 +218,6 @@
       </div>
     </section>
   </footer>
-  <script>
-    var navMenu = document.querySelector(".header-menu");
-    var navToggle = document.querySelector(".header-menu__button");
-
-    navMenu.classList.remove("header-menu--nojs");
-
-    navToggle.addEventListener("click", function () {
-      if (navMenu.classList.contains("header-menu--closed")) {
-        navMenu.classList.remove("header-menu--closed");
-        navMenu.classList.add("header-menu--opened");
-      } else {
-        navMenu.classList.remove("header-menu--opened");
-        navMenu.classList.add("header-menu--closed");
-      }
-    });
-  </script>
+  <script src="js/header-menu.js"></script>
 </body>
 </html>
