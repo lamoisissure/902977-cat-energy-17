@@ -48,6 +48,7 @@
     "node": "8.16"
   },
   "dependencies": {
-    "package-lock.json": "^1.0.0"
+    "package-lock.json": "^1.0.0",
+    "svgxuse": "^1.2.6"
   }
 }
