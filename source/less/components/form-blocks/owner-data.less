@@ -1,8 +1,8 @@
 // ---------- мобильная версия ----------
 .owner-data {
   .list-none();
-  margin-bottom: 10px;
-  padding-top: 34px;
+  margin: 0 6%;
+  padding: 34px 0 10px;
 }
 
 .owner-data__item {
@@ -13,6 +13,7 @@
 
   svg {
     position: absolute;
+    top: 16px;
     right: 16px;
     fill: #444444;
   }
@@ -24,9 +25,9 @@
   padding-bottom: 12px;
   flex-grow: 1;
 
-  &:invalid ~ svg {
-    fill: #ff8282;
-  }
+  // &:invalid ~ svg {    //сделать красным при сабмите
+  //   fill: #ff8282;
+  // }
 
   &:focus ~ svg {
     fill: @green;
@@ -38,8 +39,9 @@
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .owner-data {
-    margin-bottom: 50px;
-    padding-top: 76px;
+    width: 708px;
+    margin: 0 auto;
+    padding: 79px 38px 50px;
   }
 
   .owner-data__input {
@@ -52,7 +54,9 @@
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .owner-data {
-    margin-bottom: 48px;
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 73px 38px 54px;
   }
 
   .owner-data__item {

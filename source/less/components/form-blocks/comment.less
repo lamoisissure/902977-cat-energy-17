@@ -3,9 +3,9 @@
 }
 
 .comment__field {
-  width: 100%;
+  width: 88%;
   height: 150px;
-  margin-top: 35px;
+  margin: 35px 6% 0;
   padding: 12px 13px;
 }
 //
@@ -14,13 +14,16 @@
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .comment__field {
+    display: block;
+    width: 630px;
     height: 174px;
+    margin: 0 auto;
     margin-top: 75px;
     padding: 16px;
   }
 
   .comment {
-    margin-bottom: 56px;
+    margin-bottom: 66px;
   }
 }
 //
@@ -29,6 +32,10 @@
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .comment {
-    margin-bottom: 63px;
+    margin-bottom: 67px;
+  }
+
+  .comment__field {
+    width: 1220px;
   }
 }

@@ -9,7 +9,7 @@
 }
 
 .extras__title {
-  position: relative;
+  margin: 0 6%;
   margin-bottom: 34px;
   .main-font();
   .text-size(24px; 24px);
@@ -18,12 +18,16 @@
     padding-right: 21px;
     background-color: @bg-white;
   }
+}
+
+.extras__green-line {
+  position: relative;
 
   // зеленая полоса
-  &::after {
+  &::before {
     content: "";
     position: absolute;
-    width: 80vw;
+    width: 88%;
     height: 3px;
     top: 14px;
     right: 0;
@@ -43,33 +47,29 @@
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .extras {
-    width: 708px;
     margin-top: -140px;
     padding: 0;
   }
 
   .extras__title {
     width: 708px;
-    margin-bottom: 80px;
+    margin: 0 auto 80px;
     padding: 0;
     .text-size(36px; 36px);
 
     span {
       padding: 0 37px;
     }
+  }
 
-    // зеленая полоса
-    &::after {
-      width: 100vw;
-      top: 22px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  // зеленая полоса
+  .extras__green-line::before {
+    width: 100%;
+    top: 22px;
   }
 
   .extras__wrapper {
-    width: 708px;
-    padding: 0;
+    padding: 0 30px;
   }
 
   .extras__list {
@@ -82,22 +82,15 @@
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .extras {
-    width: 1220px;
     padding-bottom: 86px;
   }
 
   .extras__title {
-    width: 1220px;
-    margin-left: -37px;
-
-    // зеленая полоса
-    &::after {
-      left: 53%;
-    }
+    width: 1300px;
   }
 
   .extras__wrapper {
-    width: 100%;
+    padding: 0 40px;
     flex-direction: row;
     justify-content: space-between;
   }
