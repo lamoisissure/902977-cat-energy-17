@@ -24,6 +24,7 @@
     content: "";
     position: absolute;
     top: -13px;
+    left: -19px;
     width: 124px;
     height: 55px;
     border: 1px solid #cdcdcd;
@@ -39,6 +40,7 @@
 }
 
 .stats__desc {
+  width: 88px;
   padding: 5px 15px 9px;
   .light-font();
   .text-size(12px; 12px);
@@ -54,7 +56,10 @@
   text-transform: uppercase;
   text-align: center;
 }
-
+//
+//
+//
+// ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .stats {
     flex-wrap: nowrap;
@@ -72,6 +77,7 @@
     // рамка
     &::before {
       top: -15px;
+      left: 0;
       width: 161px;
       height: 72px;
     }
@@ -83,7 +89,8 @@
   }
 
   .stats__desc {
-    padding: 5px 8px 9px;
+    width: auto;
+    padding: 5px 5px 9px;
     .text-size(14px; 14px);
     background-color: @font-white;
   }
@@ -100,7 +107,10 @@
     }
   }
 }
-
+//
+//
+//
+// ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .stats {
     flex-wrap: wrap;
@@ -110,12 +120,16 @@
 
   .stats__item-cost {
     width: 100%;
-    margin: 36px 0 0;
+    margin: 37px 0 0;
     text-align: left;
 
     span {
       display: inline;
       margin-right: 60px;
     }
+  }
+
+  .stats__desc {
+    background-color: #f2f2f2;
   }
 }

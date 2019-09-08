@@ -62,6 +62,32 @@
     width: 428px;
     height: 6px;
     margin: 13px 22px;
+    border: none;
+    background-color: #dcdcdc;
+
+    &::before,
+    &::after {
+      left: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      .abs-align-top;
+      left: calc(50% - 14px);
+      width: 35px;
+      height: 35px;
+      background-color: @bg-white;
+      border: 1px solid #cfcfcf;
+    }
   }
 }
 //
@@ -70,6 +96,6 @@
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .slider {
-    margin-bottom: 89px;
+    margin: 30px 40px 69px;
   }
 }

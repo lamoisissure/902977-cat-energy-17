@@ -2,6 +2,11 @@
 .main {
   border-top: 2px solid #e6e6e6;
 }
+
+.main__wrapper--catalog {
+  width: 88%;
+  margin: 0 6%;
+}
 //
 //
 //
@@ -9,13 +14,16 @@
 @media (min-width: @tablet-width) {
   .main {
     border: none;
-    overflow-x: hidden;
+
+    &--catalog {
+      padding-bottom: 76px;
+      overflow-x: hidden;
+    }
   }
 
   .main__wrapper--catalog {
     width: @tablet-width;
     margin: 0 auto;
-    padding: 0 30px 75px;
   }
 }
 //
@@ -23,9 +31,11 @@
 //
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
+  .main--catalog {
+    padding: 0;
+  }
+
   .main__wrapper--catalog {
     width: @desktop-width;
-    margin: 0 auto;
-    padding: 0 40px;
   }
 }

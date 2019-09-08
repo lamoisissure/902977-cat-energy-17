@@ -1,8 +1,8 @@
 // ---------- мобильная версия ----------
 .cat-data {
   .list-none();
-  margin-bottom: 24px;
-  padding-bottom: 15px;
+  margin: 0 6%;
+  padding-bottom: 39px;
 }
 
 .cat-data__item {
@@ -21,10 +21,13 @@
 // ---------- планшетная версия ----------
 @media (min-width: @tablet-width) {
   .cat-data {
-    margin-bottom: 41px;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 33px 16px 69px;
   }
 
   .cat-data__item {
+    padding-right: 32px;
     padding-bottom: 16px;
   }
 
@@ -38,7 +41,9 @@
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .cat-data {
-    width: 570px;
+    width: 602px;
     margin-bottom: 39px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
