@@ -162,18 +162,20 @@
 // ---------- десктопная версия ----------
 @media (min-width: @desktop-width) {
   .product-line {
-    margin-bottom: 29px;
+    margin-bottom: 24px;
   }
 
   .product-line__list {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .product-line__item,
   .product-line__item:last-child {
     width: 570px;
     margin: 0;
+    margin-bottom: 5px;
     padding: 70px 52px 61px;
 
     &:last-child {

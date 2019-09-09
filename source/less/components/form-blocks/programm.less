@@ -65,8 +65,7 @@
   .main-font(normal; @font-grey);
   .text-size(16px; 18px);
   text-transform: uppercase;
-  border-color: #e6e6e6;
-  border-style: solid;
+  border: 2px solid #e6e6e6;
 
   &:invalid {
     // border: 2px solid #ff8282;        // сделать красную рамку при сабмите
@@ -211,6 +210,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .programm__button {
